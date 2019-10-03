@@ -20,6 +20,6 @@ finding the "best" / optimal value of a state, given some assumtions based
 #### Run notebooks
  **[googlecolab-notebooks](https://colab.research.google.com/notebooks/gpu.ipynb)**    
  **[leatsquares](https://colab.research.google.com/github/Kraftbar/kalman-r/blob/master/utf-8''C2M1L1.ipynb)**    
- **[leatsquares](https://colab.research.google.com/github/Kraftbar/kalman-r/blob/master/utf-8''C2M1L2.ipynb)**    
+ **[leatsquares](https://colab.research.google.com/github/Kraftbar/kalman-r/blob/master/utf-8''C2M1L2.ipynb)**     
  and paste link
  
