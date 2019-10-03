@@ -7,8 +7,7 @@ finding the "best" / optimal value of a state, given some assumtions based
 
 
 
-![equation](y = test)
-
+$\text{S}_1(N) = \sum_{p=1}^N \text{E}(p)$
 
 #### Run notebooks
  **[googlecolab-notebooks](https://colab.research.google.com/notebooks/gpu.ipynb)**    
