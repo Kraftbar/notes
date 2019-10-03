@@ -6,6 +6,10 @@ finding the "best" / optimal value of a state, given some assumtions based
  on the sensores and the external world.
 
 
+
+![equation](y = test)
+
+
 #### Run notebooks
  **[googlecolab-notebooks](https://colab.research.google.com/notebooks/gpu.ipynb)**    
  and paste link
