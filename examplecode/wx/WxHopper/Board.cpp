@@ -240,7 +240,6 @@ void Board::ClearFullLines()
     pieceDoneFalling = true;
     current.SetShape(None);
     DrawPlayer();
-
     Refresh();
 }
 
