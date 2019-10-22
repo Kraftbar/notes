@@ -13,8 +13,8 @@ finding the "best" / optimal value of a state, given some assumtions based
  and paste link
  
 #### Some kalman repos
-> **[https://github.com/jeremyfix/easykf](easykf)**    
-> **[https://github.com/hmartiro/kalman-cpp](kalman-cpp)**    
+> **[easykf ](https://github.com/jeremyfix/easykf)**    
+> **[kalman-cpp](https://github.com/hmartiro/kalman-cpp)**    
 
 
 #### Run notebooks
