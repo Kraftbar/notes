@@ -8,6 +8,7 @@
 ## plotting 
 > **[qcustomplot](https://www.qcustomplot.com/)**    
 > **[gnuplot-cpp](https://github.com/martinruenz/gnuplot-cpp)**    
+> **[matplotlib-cpp](https://github.com/lava/matplotlib-cpp)**    
 
 
 ## mobile 
