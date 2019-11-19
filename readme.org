@@ -107,4 +107,7 @@ $$
 A=P \Sigma Q^{T}
 $$
 
-* Covar 
+* Covar
+
+
+ * linear def
