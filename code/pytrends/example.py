@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 def get_plot(key_words):
     pytrends = TrendReq(hl='en-US', tz=360)
-    pytrends.build_payload([key_words], cat=0, timeframe='2012-10-01 2019-10-30', gprop='',geo="US-NY")
+    pytrends.build_payload([key_words], cat=0, timeframe='2012-10-01 2019-11-15', gprop='',geo="US-NY")
     df = pytrends.interest_over_time()
     print(df.head(10))
     df['timestamp'] = df.index
@@ -24,17 +24,8 @@ def get_plot(key_words):
     plt.show()
     return df
 ### Now we can call the function with many different keywords. Let’s stick to the pop culture searches:
-lol=get_plot("Kim Kardashian Costume")
-get_plot("Taylor Swift Costume")
-get_plot("Trump Costume")
-get_plot("Joker Costume")
-
-
-### We can also try more traditional Halloween costumes :
-get_plot("Ghost Costume")
-get_plot("Woody Costume")
-get_plot("Iron Man Costume")
-get_plot("Spiderman Costume")
+get_plot("Linux")
+get_plot("Ubuntu")
 
 
 ### To make a decision on our results we can define a function that returns the sum of the number of searches for a given keyword:
