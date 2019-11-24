@@ -42,8 +42,12 @@
    (LaTeX-add-labels
     "sec-1"
     "sec-1-1"
+    "sec-1-2"
+    "sec-1-3"
+    "sec-1-4"
     "sec-2"
-    "sec-2-1"
-    "sec-3"))
+    "sec-3"
+    "sec-3-1"
+    "sec-4"))
  :latex)
 

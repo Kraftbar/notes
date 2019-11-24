@@ -1,4 +1,4 @@
-% Created 2019-11-06 Wed 22:45
+% Created 2019-11-24 Sun 13:28
 \documentclass[a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -40,14 +40,17 @@ Things i keep forgetting
 
 \section{Norms}
 \label{sec-1}
-\subsection*{properties}
+\subsection*{def}
 \label{sec-1-1}
 \begin{enumerate}
-\item $\|x\| \geq 0, \text { and }\|x\|=0 \Longleftrightarrow x=0$
-\item $\|\alpha x\|=|\alpha|\|x\|$
-\item $\|x+y\| \leq\|x\|+\|y\|$
+\item Positivity  $\|x\| \geq 0$
+\item Positive definiteness $\|x\|=0 \Longleftrightarrow x=0$
+\item Homogeneity $\|\alpha x\|=|\alpha|\|x\|$ for arbitrary scalar $\alpha$
+\item Triangle inequality $\|x+y\| \leq\|x\|+\|y\|$
 \end{enumerate}
-
+Note: not sure if this holds for ever norm
+\subsection*{The different matrix ones (Norms on $A \in \mathbb{R}^{m \times n}$)}
+\label{sec-1-2}
 $$
 \|A\|_{1}=\max _{1 \leq j \leq n} \sum_{i=1}^{m}\left|a_{i j}\right|
 $$
@@ -65,10 +68,56 @@ $$
 $$
 \|A\|_{\infty}=\max _{1 \leq i \leq m} \sum_{j=1}^{n}\left|a_{i j}\right|
 $$
+\subsection*{Vector norms (Norms on $\mathbb{R}^{n}$)}
+\label{sec-1-3}
+
+$$|\mathbf{x}|_{p} \equiv\left(\sum_{i}\left|x_{i}\right|^{p}\right)^{1 / p}$$
+
+special case:
+
+$$|\mathbf{x}|_{\infty} \equiv \max _{i}\left|x_{i}\right|$$
+
+
+
+Tips: pretty sure think $\|\cdot\|$ usually just refers to the 2-norm.
+
+
+\subsection*{Scalar norm (Norm on $C[a, b]$)}
+\label{sec-1-4}
+
+\begin{equation}
+\left.\begin{array}{l}
+{\|f\|_{p}=\left(\int_{a}^{b}|f(\tau)|^{p} d \tau\right)^{\frac{1}{p}}, \quad p \in[1, \infty]} \\ 
+{\|f\|_{\infty}=\displaystyle\sup _{\scriptscriptstyle a \leq t \leq b}|f(t)| }\end{array} \quad,
+\right\} \quad \mathscr{L}_{p}-\text { norms }
+\end{equation}
+
+$$
+C[0, \infty), \mathscr{L}_{p} \text{ is a Banach space}
+$$
+
+$f \in \mathscr{L}_{p} \Leftrightarrow\|f\|_{p}$ is bounded, i.e. $\exists c:\|f\|_{p} \leq c$
+\section{Tensor rank}
+\label{sec-2}
+\begin{table}[h]
+\begin{tabular}{cl}
+rank                & object   \\
+\hline
+0                   & scalar   \\
+1                   & vector  \\
+2                   & matrix (/Dyad)  \\
+$\geq 3$ & tensor        
+\end{tabular}
+\end{table}
+Also sometimes  triad, tetrad are used to refer to tensors of 
+rank 3 and 4 respectivly. Some refer to the rank of a tensor as
+its order or its degree.
+
+
 
 
 \section{SVD}
-\label{sec-2}
+\label{sec-3}
 Example: 
 $A=\left[\begin{array}{lll}{0} & {1} & {1} \\ {\sqrt{2}} & {2} & {0} \\ {0} & {1} & {1}\end{array}\right]$
 
@@ -78,7 +127,7 @@ A=P \Sigma Q^{T}
 $$
 
 \subsection*{Method}
-\label{sec-2-1}
+\label{sec-3-1}
 Computing:
 $$
 A A^{T}=\left[\begin{array}{lll}{2} & {2} & {2} \\ {2} & {6} & {2} \\ {2} & {2} & {2}\end{array}\right]
@@ -138,6 +187,6 @@ A=P \Sigma Q^{T}
 $$
 
 \section{Covar}
-\label{sec-3}
+\label{sec-4}
 % Emacs 25.2.2 (Org mode 8.2.10)
 \end{document}

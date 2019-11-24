@@ -13,13 +13,15 @@ Things i keep forgetting
 [[./imgs/5332.png]]
 
 * Norms
-** properties
+** def
 \begin{enumerate}
-\item $\|x\| \geq 0, \text { and }\|x\|=0 \Longleftrightarrow x=0$
-\item $\|\alpha x\|=|\alpha|\|x\|$
-\item $\|x+y\| \leq\|x\|+\|y\|$
+\item Positivity  $\|x\| \geq 0$
+\item Positive definiteness $\|x\|=0 \Longleftrightarrow x=0$
+\item Homogeneity $\|\alpha x\|=|\alpha|\|x\|$ for arbitrary scalar $\alpha$
+\item Triangle inequality $\|x+y\| \leq\|x\|+\|y\|$
 \end{enumerate}
-
+Note: not sure if this holds for ever norm
+** The different matrix ones (Norms on $A \in \mathbb{R}^{m \times n}$)
 $$
 \|A\|_{1}=\max _{1 \leq j \leq n} \sum_{i=1}^{m}\left|a_{i j}\right|
 $$
@@ -37,6 +39,49 @@ $$
 $$
 \|A\|_{\infty}=\max _{1 \leq i \leq m} \sum_{j=1}^{n}\left|a_{i j}\right|
 $$
+** Vector norms (Norms on $\mathbb{R}^{n}$)
+
+$$|\mathbf{x}|_{p} \equiv\left(\sum_{i}\left|x_{i}\right|^{p}\right)^{1 / p}$$
+
+special case:
+
+$$|\mathbf{x}|_{\infty} \equiv \max _{i}\left|x_{i}\right|$$
+
+
+
+Tips: pretty sure think $\|\cdot\|$ usually just refers to the 2-norm.
+
+
+** Scalar norm (Norm on $C[a, b]$)
+
+\begin{equation}
+\left.\begin{array}{l}
+{\|f\|_{p}=\left(\int_{a}^{b}|f(\tau)|^{p} d \tau\right)^{\frac{1}{p}}, \quad p \in[1, \infty]} \\ 
+{\|f\|_{\infty}=\displaystyle\sup _{\scriptscriptstyle a \leq t \leq b}|f(t)| }\end{array} \quad,
+\right\} \quad \mathscr{L}_{p}-\text { norms }
+\end{equation}
+
+$$
+C[0, \infty), \mathscr{L}_{p} \text{ is a Banach space}
+$$
+
+$f \in \mathscr{L}_{p} \Leftrightarrow\|f\|_{p}$ is bounded, i.e. $\exists c:\|f\|_{p} \leq c$
+* Tensor rank 
+\begin{table}[h]
+\begin{tabular}{cl}
+rank                & object   \\
+\hline
+0                   & scalar   \\
+1                   & vector  \\
+2                   & matrix (/Dyad)  \\
+$\geq 3$ & tensor        
+\end{tabular}
+\end{table}
+Also sometimes  triad, tetrad are used to refer to tensors of 
+rank 3 and 4 respectivly. Some refer to the rank of a tensor as
+its order or its degree.
+
+
 
 
 * SVD
