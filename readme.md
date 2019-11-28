@@ -23,4 +23,8 @@ cinnamon
 Sichuan pepper     
 Fennel seeds      
 Clove (nellik)       
-###
+### fruit 
+Durian      
+Jackfruit (South)
+Dragon eye    
+Licu     
