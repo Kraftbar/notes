@@ -1,4 +1,4 @@
-% Created 2019-11-25 Mon 20:58
+% Created 2019-11-30 Sat 20:03
 \documentclass[a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -194,7 +194,7 @@ $$
 
 \section{diagonalize / change of basis?}
 \label{sec-5}
-\subsection*{diagonilze}
+\subsection*{diagonalize}
 \label{sec-5-1}
 $$
 A=\left[\begin{array}{lll}{4} & {0} & {1} \\ {2} & {3} & {2} \\ {1} & {0} & {4}\end{array}\right]
@@ -272,5 +272,18 @@ A=P J P^{-1} \quad J=\begin{equation}
 \end{equation}
 \subsection*{linear def}
 \label{sec-5-3}
+
+\section{positive definete}
+\label{sec-6}
+A square matrix A is positive definite if there is a positive scalar α such that
+\begin{equation}
+x^{T} A x \geq \alpha x^{T} x, \quad \text { for all } x \in \mathbf{R}^{n}
+\end{equation}
+It is positive semidefinite if
+\begin{equation}
+x^{T} A x \geq 0, \quad \text { for all } x \in \mathbb{R}^{n}
+\end{equation}
+We can recognize that a symmetric matrix is positive definite by computing its eigenvalues
+and verifying that they are all positive, or by performing a Cholesky factorization. 
 % Emacs 25.2.2 (Org mode 8.2.10)
 \end{document}
