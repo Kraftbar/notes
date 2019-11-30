@@ -1,4 +1,4 @@
-% Created 2019-11-24 Sun 13:28
+% Created 2019-11-25 Mon 20:58
 \documentclass[a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -188,5 +188,89 @@ $$
 
 \section{Covar}
 \label{sec-4}
+
+
+\newpage
+
+\section{diagonalize / change of basis?}
+\label{sec-5}
+\subsection*{diagonilze}
+\label{sec-5-1}
+$$
+A=\left[\begin{array}{lll}{4} & {0} & {1} \\ {2} & {3} & {2} \\ {1} & {0} & {4}\end{array}\right]
+$$
+\begin{align*}
+\lambda&=5 \quad \operatorname{NUL}(A-5 I) =\text { SPAN }\left\{\left[\begin{array}{l}{1} \\ {2} \\ {1}\end{array}\right]\right\} \\
+\lambda&=3 \quad \operatorname{NUL}(A-3 I) = \text { SPAN }\left\{\left[\begin{array}{l}{0} \\ {1} \\ {0}\end{array}\right],\left[\begin{array}{c}{-1} \\ {0} \\ {1}\end{array}\right]\right\}
+\end{align*}
+$$
+D=\left[\begin{array}{lll}{5} & {0} & {0} \\ {0} & {3} & {0} \\ {0} & {0} & {3}\end{array}\right]
+P=\left[\begin{array}{llc}{1} & {0} & {-1} \\ {2} & {1} & {0} \\ {1} & {0} & {1}\end{array}\right]
+$$
+OK, good
+$$
+A=P D P^{-1}
+$$
+\subsection*{jordan}
+\label{sec-5-2}
+$$
+A=\left[\begin{array}{lll}{1} & {1} & {1} \\ {0} & {1} & {0} \\ {0} & {0} & {1}\end{array}\right]
+$$
+
+\begin{align*}
+\lambda&=1 \quad \operatorname{NUL}(A-1 I) = \text { SPAN }\left\{\left[\begin{array}{l}{1} \\ {0} \\ {0}\end{array}\right],\left[\begin{array}{c}{0} \\ {1} \\ {-1}\end{array}\right]\right\}
+\end{align*}
+2 eigenvectors? :-d
+
+$$
+\left[\begin{array}{lll}
+{\lambda} & {1} & ?\\ 
+{0} & {\lambda}&  ?\\ 
+{0} & {0} &? 
+\end{array}\right]
+$$
+
+\begin{align*}
+A V_{1}&=\lambda V_{1} \\
+ A V_{2}&=V_{1}+\lambda V_{2}
+\end{align*}
+
+\begin{equation*}
+\begin{array}{l}{A V_{2}-\lambda V_{2}=V_{1}} \\ {(A-\lambda I) V_{2}=V_{1}}\end{array}
+\end{equation*}
+$V_1$ is given what is $V_2$? let $V_1=[1,0,0]^T$
+\begin{align*}
+(A-1 I) V_{2}&=V_{1}\\
+\left[\begin{array}{lll}{0} & {1} & {1} \\ {0} & {0} & {0} \\ {0} & {0} & {0}\end{array}\right] V_{2}&=\left[\begin{array}{l}{1} \\ {0} \\ {0}\end{array}\right]
+\end{align*}
+
+\begin{equation}
+V_{2}=\left[\begin{array}{l}{0} \\ {0} \\ {1}\end{array}\right]+x\left[\begin{array}{l}{1} \\ {0} \\ {0}\end{array}\right]+y\left[\begin{array}{c}{0} \\ {1} \\ {-1}\end{array}\right]
+\end{equation}
+Let 
+\begin{equation}
+V_{2}=\left[\begin{array}{l}{0} \\ {0} \\ {1}\end{array}\right]
+\end{equation}
+
+\begin{equation}
+V_{3}=\left[\begin{array}{c}{0} \\ {1} \\ {-1}\end{array}\right]
+\end{equation}
+
+\begin{equation}
+A \quad \text { has the from }\left[\begin{array}{lll}1  &  1 &0 \\  0  &  1 &0 \\  0  &  0 &1\end{array}\right]
+\end{equation}
+
+\begin{equation}
+P=\left[\begin{array}{lll}{V_{1}} & {V_{2}} & {V_{3}}\end{array}\right]=
+ \left[\begin{array}{ccc}{1} & {0} & {0} \\ {0} & {0} & {1} \\ {0} & {1} & {-1}\end{array}\right]
+\end{equation}
+
+\begin{equation}
+A=P J P^{-1} \quad J=\begin{equation}
+\left[\begin{array}{lll}{1} & {0} & {0} \\ {0} & {1} & {0} \\ {0} & {0} & {1}\end{array}\right]
+\end{equation}
+\end{equation}
+\subsection*{linear def}
+\label{sec-5-3}
 % Emacs 25.2.2 (Org mode 8.2.10)
 \end{document}

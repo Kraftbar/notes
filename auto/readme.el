@@ -48,6 +48,10 @@
     "sec-2"
     "sec-3"
     "sec-3-1"
-    "sec-4"))
+    "sec-4"
+    "sec-5"
+    "sec-5-1"
+    "sec-5-2"
+    "sec-5-3"))
  :latex)
 
