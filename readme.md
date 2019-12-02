@@ -27,10 +27,17 @@ Fennel seeds
 Clove (nellik)       
 
 ### fruit 
+#### tried
 Durian      
 Jackfruit (South)    
-Dragon eye    
+Longan/ Dragon eye    
 Licu     
+Purple Mangosteen 山竹
+Pitaya, or “Dragon Fruit” 火龙果.      
+#### not tried
+Rambutan 红毛丹    
+Chinese Bayberry 杨梅     
+
 
 ### dishes
 
