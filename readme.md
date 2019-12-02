@@ -4,6 +4,8 @@
 ### sugar cane
 Molasses (brown sugar?// byproduct of sugar cane processing)         
 
+<br>
+
 ## asian essentials 
 ### sauce
 #### soy
@@ -23,8 +25,22 @@ cinnamon
 Sichuan pepper     
 Fennel seeds      
 Clove (nellik)       
+
+
+
 ### fruit 
 Durian      
 Jackfruit (South)    
 Dragon eye    
 Licu     
+
+<br>
+
+## foods
+### chickbeans
+hummus   
+falaffel     
+### rice
+rice ball noodle      
+### weat
+gluten noodle    
