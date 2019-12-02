@@ -182,7 +182,7 @@ $$
 \begin{align*}
 \lambda&=1 \quad \operatorname{NUL}(A-1 I) = \text { SPAN }\left\{\left[\begin{array}{l}{1} \\ {0} \\ {0}\end{array}\right],\left[\begin{array}{c}{0} \\ {1} \\ {-1}\end{array}\right]\right\}
 \end{align*}
-2 eigenvectors? :-d
+2 eigenvectors? :-d    (for some reason we are calling these vectors the first and third)
 
 $$
 \left[\begin{array}{lll}
@@ -226,15 +226,18 @@ A \quad \text { has the from }\left[\begin{array}{lll}1  &  1 &0 \\  0  &  1 &0 
 P=\left[\begin{array}{lll}{V_{1}} & {V_{2}} & {V_{3}}\end{array}\right]=
  \left[\begin{array}{ccc}{1} & {0} & {0} \\ {0} & {0} & {1} \\ {0} & {1} & {-1}\end{array}\right]
 \end{equation}
-
+then
 \begin{equation}
 A=P J P^{-1} \quad J=\begin{equation}
-\left[\begin{array}{lll}{1} & {0} & {0} \\ {0} & {1} & {0} \\ {0} & {0} & {1}\end{array}\right]
+\left[\begin{array}{lll}{1} & {1} & {0} \\ {0} & {1} & {0} \\ {0} & {0} & {1}\end{array}\right]
 \end{equation}
 \end{equation}
-** linear def
 
-* positive definete
+
+
+* linear def
+
+* positive definite
 A square matrix A is positive definite if there is a positive scalar α such that
 \begin{equation}
 x^{T} A x \geq \alpha x^{T} x, \quad \text { for all } x \in \mathbf{R}^{n}
