@@ -1,6 +1,6 @@
 # cooking-r
 
-## sweet
+## sweet things
 ### sugar cane
 Molasses (brown sugar?// byproduct of sugar cane processing)         
 
