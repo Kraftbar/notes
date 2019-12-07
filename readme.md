@@ -40,8 +40,13 @@ Pitaya, or “Dragon Fruit” 火龙果
 Rambutan 红毛丹    
 Chinese Bayberry 杨梅     
 
+### vegetable
+bok choy (xiao you cai)      
 
 ### dishes
+
+rice ball noodle      
+烤麸    
 
 <br>
 
@@ -49,7 +54,3 @@ Chinese Bayberry 杨梅
 ### chickbeans
 hummus   
 falaffel     
-### rice
-rice ball noodle      
-### weat
-烤麸    
