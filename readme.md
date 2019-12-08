@@ -42,6 +42,7 @@ Chinese Bayberry 杨梅
 
 ### vegetable
 bok choy (xiao you cai)      
+bitter melon         
 
 ### dishes
 
