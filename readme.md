@@ -64,8 +64,9 @@ cili con carne
 bolognese      
 nudel suppe       
 dandan (ish)       
+carbonara      
 #### might need extra eq
 pizza     
 stir fry       
-indisk (finn ut hva en sånn generell ting heter)          
+indisk (finn ut hva en sånn generell ting heter)         
 
