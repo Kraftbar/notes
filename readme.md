@@ -23,7 +23,7 @@ Zhenjiang vinegar
 
 ### spice
 Star anise     
-cinnamon     
+cinnamon stick     
 Sichuan pepper     
 Fennel seeds      
 Clove (nellik)       
