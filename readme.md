@@ -62,6 +62,8 @@ plastic bags (1or3 l)
 ## cooking rotation
 cili con carne       
 bolognese      
+nudel suppe       
+dandan (ish)       
 #### might need extra eq
 pizza     
 stir fry       
