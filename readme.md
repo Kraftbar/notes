@@ -55,7 +55,16 @@ rice ball noodle
 hummus   
 falaffel     
 
-## non edibles
+## non edibles but essential
 Rubber bands      
 plastic bags (1or3 l)     
+
+## cooking rotation
+cili con carne       
+bolognese      
+
+### might need extra eq
+pizza     
+stir fry       
+indisk (finn ut hva en sånn generell ting heter)          
 
