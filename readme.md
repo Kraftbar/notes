@@ -54,3 +54,8 @@ rice ball noodle
 ### chickbeans
 hummus   
 falaffel     
+
+## non edibles
+Rubber bands      
+plastic bags (1or3 l)     
+
