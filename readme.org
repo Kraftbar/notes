@@ -248,3 +248,31 @@ x^{T} A x \geq 0, \quad \text { for all } x \in \mathbb{R}^{n}
 \end{equation}
 We can recognize that a symmetric matrix is positive definite by computing its eigenvalues
 and verifying that they are all positive, or by performing a Cholesky factorization. 
+
+
+
+*   rotation things
+
+
+3D point as 3-vector
+$$
+\mathbf{X}=\left[\begin{array}{l}{X} \\ {Y} \\ {Z}\end{array}\right]
+$$
+
+3D point using affine homogeneous
+$$
+\left[\begin{array}{l}{\mathbf{X}} \\ {1}\end{array}\right]=\left[\begin{array}{l}{X} \\ {Y} \\ {Z} \\ {1}\end{array}\right]
+$$
+Inverse of rotation matrix
+\begin{equation}
+\begin{aligned} \mathrm{X}^{\prime} &=\mathrm{RX}+\mathrm{t} \\
+ \mathrm{X}^{\prime}-\mathrm{t} &=\mathrm{RX} \\ 
+\mathrm{R}^{\top}\left(\mathrm{X}^{\prime}-\mathrm{t}\right) &=\mathrm{X} \\
+ \mathrm{R}^{\top} \mathrm{X}^{\prime}-\mathrm{R}^{\top} \mathrm{t} &=\mathrm{X} 
+\end{aligned}
+\end{equation}
+This gives in homogenius
+
+$$
+\left[\begin{array}{cc}{\mathrm{R}^{\top}} & {-\mathrm{R}^{\top} \mathbf{t}} \\ {0^{\top}} & {1}\end{array}\right]\left[\begin{array}{l}{\mathrm{X}^{\prime}} \\ {1}\end{array}\right]=\left[\begin{array}{l}{\mathrm{X}} \\ {1}\end{array}\right]
+$$

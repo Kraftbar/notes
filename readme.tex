@@ -1,4 +1,4 @@
-% Created 2019-11-30 Sat 21:11
+% Created 2019-12-11 Wed 13:55
 \documentclass[a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -220,7 +220,7 @@ $$
 \begin{align*}
 \lambda&=1 \quad \operatorname{NUL}(A-1 I) = \text { SPAN }\left\{\left[\begin{array}{l}{1} \\ {0} \\ {0}\end{array}\right],\left[\begin{array}{c}{0} \\ {1} \\ {-1}\end{array}\right]\right\}
 \end{align*}
-2 eigenvectors? :-d
+2 eigenvectors? :-d    (for some reason we are calling these vectors the first and third)
 
 $$
 \left[\begin{array}{lll}
@@ -272,6 +272,7 @@ A=P J P^{-1} \quad J=\begin{equation}
 \end{equation}
 
 
+
 \section{linear def}
 \label{sec-6}
 
@@ -287,5 +288,34 @@ x^{T} A x \geq 0, \quad \text { for all } x \in \mathbb{R}^{n}
 \end{equation}
 We can recognize that a symmetric matrix is positive definite by computing its eigenvalues
 and verifying that they are all positive, or by performing a Cholesky factorization. 
+
+
+
+\section{rotation things}
+\label{sec-8}
+
+
+3D point as 3-vector
+$$
+\mathbf{X}=\left[\begin{array}{l}{X} \\ {Y} \\ {Z}\end{array}\right]
+$$
+
+3D point using affine homogeneous
+$$
+\left[\begin{array}{l}{\mathbf{X}} \\ {1}\end{array}\right]=\left[\begin{array}{l}{X} \\ {Y} \\ {Z} \\ {1}\end{array}\right]
+$$
+Inverse of rotation matrix
+\begin{equation}
+\begin{aligned} \mathrm{X}^{\prime} &=\mathrm{RX}+\mathrm{t} \\
+ \mathrm{X}^{\prime}-\mathrm{t} &=\mathrm{RX} \\ 
+\mathrm{R}^{\top}\left(\mathrm{X}^{\prime}-\mathrm{t}\right) &=\mathrm{X} \\
+ \mathrm{R}^{\top} \mathrm{X}^{\prime}-\mathrm{R}^{\top} \mathrm{t} &=\mathrm{X} 
+\end{aligned}
+\end{equation}
+This gives in homogenius
+
+$$
+\left[\begin{array}{cc}{\mathrm{R}^{\top}} & {-\mathrm{R}^{\top} \mathbf{t}} \\ {0^{\top}} & {1}\end{array}\right]\left[\begin{array}{l}{\mathrm{X}^{\prime}} \\ {1}\end{array}\right]=\left[\begin{array}{l}{\mathrm{X}} \\ {1}\end{array}\right]
+$$
 % Emacs 25.2.2 (Org mode 8.2.10)
 \end{document}

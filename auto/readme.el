@@ -53,6 +53,7 @@
     "sec-5-1"
     "sec-5-2"
     "sec-6"
-    "sec-7"))
+    "sec-7"
+    "sec-8"))
  :latex)
 
