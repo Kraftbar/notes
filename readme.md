@@ -26,7 +26,9 @@ Star anise
 cinnamon stick     
 Sichuan pepper     
 Fennel seeds      
-Clove (nellik)       
+Clove (nellik)     
+#### jp
+togarashi       
 
 ### fruit 
 #### tried
