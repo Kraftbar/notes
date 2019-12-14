@@ -1,4 +1,4 @@
-% Created 2019-12-11 Wed 13:55
+% Created 2019-12-14 Sat 12:24
 \documentclass[a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -22,6 +22,7 @@
 \usepackage{array,makecell,multirow}
 \pgfplotsset{width=16cm,height=6cm, compat=1.8}
 \usepackage{amsmath,mathtools,amssymb,mathrsfs}
+\usepackage{cancel}
 \setcounter{secnumdepth}{1}
 \author{nybo}
 \date{\today}
@@ -192,9 +193,9 @@ $$
 
 \newpage
 
-\section{diagonalize / change of basis?}
+\section{change of basis}
 \label{sec-5}
-\subsection*{diagonalize}
+\subsection*{eigenvalue  decomposition}
 \label{sec-5-1}
 $$
 A=\left[\begin{array}{lll}{4} & {0} & {1} \\ {2} & {3} & {2} \\ {1} & {0} & {4}\end{array}\right]
@@ -245,7 +246,7 @@ $V_1$ is given what is $V_2$? let $V_1=[1,0,0]^T$
 \end{align*}
 
 \begin{equation}
-V_{2}=\left[\begin{array}{l}{0} \\ {0} \\ {1}\end{array}\right]+x\left[\begin{array}{l}{1} \\ {0} \\ {0}\end{array}\right]+y\left[\begin{array}{c}{0} \\ {1} \\ {-1}\end{array}\right]
+V_{2}=\left[\begin{array}{l}{0} \\ {0} \\ {1}\end{array}\right]+\bcancel{x\left[\begin{array}{l}{1} \\ {0} \\ {0}\end{array}\right]+y\left[\begin{array}{c}{0} \\ {1} \\ {-1}\end{array}\right]}
 \end{equation}
 Let 
 \begin{equation}

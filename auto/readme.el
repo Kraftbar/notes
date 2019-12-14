@@ -38,7 +38,8 @@
     "makecell"
     "multirow"
     "mathtools"
-    "mathrsfs")
+    "mathrsfs"
+    "cancel")
    (LaTeX-add-labels
     "sec-1"
     "sec-1-1"

@@ -7,6 +7,9 @@
 #+LATEX_HEADER: \usepackage{array,makecell,multirow} 
 #+LATEX_HEADER: \pgfplotsset{width=16cm,height=6cm, compat=1.8}
 #+LATEX_HEADER: \usepackage{amsmath,mathtools,amssymb,mathrsfs}  
+#+LATEX_HEADER: \usepackage{cancel}
+
+
 
 Things i keep forgetting
 #+ATTR_LaTeX: :height 0.2\textwidth :center
@@ -157,8 +160,8 @@ $$
 
 \newpage
 
-* diagonalize / change of basis?
-** diagonalize
+*  change of basis
+** eigenvalue  decomposition
 $$
 A=\left[\begin{array}{lll}{4} & {0} & {1} \\ {2} & {3} & {2} \\ {1} & {0} & {4}\end{array}\right]
 $$
@@ -207,7 +210,7 @@ $V_1$ is given what is $V_2$? let $V_1=[1,0,0]^T$
 \end{align*}
 
 \begin{equation}
-V_{2}=\left[\begin{array}{l}{0} \\ {0} \\ {1}\end{array}\right]+x\left[\begin{array}{l}{1} \\ {0} \\ {0}\end{array}\right]+y\left[\begin{array}{c}{0} \\ {1} \\ {-1}\end{array}\right]
+V_{2}=\left[\begin{array}{l}{0} \\ {0} \\ {1}\end{array}\right]+\bcancel{x\left[\begin{array}{l}{1} \\ {0} \\ {0}\end{array}\right]+y\left[\begin{array}{c}{0} \\ {1} \\ {-1}\end{array}\right]}
 \end{equation}
 Let 
 \begin{equation}
