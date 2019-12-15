@@ -12,6 +12,6 @@
 > **[2to3](https://packages.debian.org/sid/2to3)**   
 
 ## Jupyter
-### Run notebooks
+### Run notebooks online
 > **[tryjupyter](https://jupyter.org/try)**   
 > **[colab](https://colab.research.google.com/)**   
