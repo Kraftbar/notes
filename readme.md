@@ -77,3 +77,8 @@ pizza
 stir fry       
 indisk (finn ut hva en sånn generell ting heter)         
 
+
+## seafood    
+### fish
+spain       
+china       
