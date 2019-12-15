@@ -1,5 +1,5 @@
-% Created 2019-12-14 Sat 12:24
-\documentclass[a4paper]{article}
+% Created 2019-12-15 Sun 21:09
+\documentclass[12pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{fixltx2e}
@@ -318,5 +318,22 @@ This gives in homogenius
 $$
 \left[\begin{array}{cc}{\mathrm{R}^{\top}} & {-\mathrm{R}^{\top} \mathbf{t}} \\ {0^{\top}} & {1}\end{array}\right]\left[\begin{array}{l}{\mathrm{X}^{\prime}} \\ {1}\end{array}\right]=\left[\begin{array}{l}{\mathrm{X}} \\ {1}\end{array}\right]
 $$
+\subsection*{Rodrigues rotation}
+\label{sec-8-1}
+rotation matrix in vector form
+\begin{equation} 
+\begin{array}{l} \theta \leftarrow norm(r) \\ r  \leftarrow r/ \theta \\ R =  \cos{\theta} I + (1- \cos{\theta} ) r r^T +  \sin{\theta}\left[\begin{array}{ccc}{0} & {-r_{z}} & {r_{y}} \\ {r_{z}} & {0} & {-r_{x}} \\ {-r_{y}} & {r_{x}} & {0}\end{array}\right] \end{array}
+\end{equation}
+
+Inverse transformation can be also done easily, since
+
+
+
+
+\begin{equation}
+ \sin{\theta}\left[\begin{array}{ccc}{0} & {-r_{z}} & {r_{y}} \\ {r_{z}} & {0} & {-r_{x}} \\ {-r_{y}} & {r_{x}} & {0}\end{array}\right]= \frac{R - R^T}{2}
+\end{equation}
+
+A rotation vector is a convenient and most compact representation of a rotation matrix (since any rotation matrix has just 3 degrees of freedom)
 % Emacs 25.2.2 (Org mode 8.2.10)
 \end{document}

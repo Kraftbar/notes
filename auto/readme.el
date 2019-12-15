@@ -2,7 +2,7 @@
  "readme"
  (lambda ()
    (TeX-add-to-alist 'LaTeX-provided-class-options
-                     '(("article" "a4paper")))
+                     '(("article" "12pt" "a4paper")))
    (TeX-add-to-alist 'LaTeX-provided-package-options
                      '(("inputenc" "utf8") ("fontenc" "T1") ("ulem" "normalem") ("geometry" "margin=3cm")))
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
@@ -15,7 +15,7 @@
    (TeX-run-style-hooks
     "latex2e"
     "article"
-    "art10"
+    "art12"
     "inputenc"
     "fontenc"
     "fixltx2e"
@@ -55,6 +55,7 @@
     "sec-5-2"
     "sec-6"
     "sec-7"
-    "sec-8"))
+    "sec-8"
+    "sec-8-1"))
  :latex)
 
