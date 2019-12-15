@@ -1,8 +1,10 @@
 # cooking-r
 
-## sweet things
+## intressting stuff
 ### sugar cane
 Molasses (brown sugar?// byproduct of sugar cane processing)         
+### foods
+Pierogi (western dumplings?)        
 
 <br>
 
