@@ -295,3 +295,60 @@ Inverse transformation can be also done easily, since
 \end{equation}
 
 A rotation vector is a convenient and most compact representation of a rotation matrix (since any rotation matrix has just 3 degrees of freedom)
+
+\newpage
+* Logic 
+** Necessity and sufficiency
+\begin{equation*}
+\begin{array}{|c|c|c|c|c|}\hline S & {N} & {S \Rightarrow N} & {S \Leftarrow N} & {S \Leftrightarrow N} \\ \hline T & {T} & {T} & {T} & {T} \\ \hline T & {F} & {F} & {T} & {F} \\ \hline F & {T} & {T} & {F} & {F} \\ \hline F & {F} & {T} & {T} & {T} \\ \hline\end{array}
+\end{equation*}
+
+\begin{center}
+\begin{tikzpicture}
+\def\radius{2cm}
+\def\mycolorbox#1{\textcolor{#1}{\rule{2ex}{2ex}}}
+\colorlet{colori}{blue!70}
+\colorlet{colorii}{red!70}
+
+\coordinate (ceni);
+\coordinate[xshift=\radius] (cenii);
+
+\draw[fill=colori,fill opacity=0.5] (ceni) circle (\radius);
+\draw[fill=colorii,fill opacity=0.5] (cenii) circle (\radius);
+
+\draw  ([xshift=-20pt,yshift=20pt]current bounding box.north west) 
+  rectangle ([xshift=20pt,yshift=-20pt]current bounding box.south east);
+
+\node[yshift=10pt] at (current bounding box.north) {Venn diagram };
+\node[xshift=-.5\radius] at (ceni) {$\mathbf{S}$};
+\node[xshift=.5\radius] at (cenii) {$\mathbf{N}$};
+\node[xshift=.9\radius] at (ceni) {$\mathbf{S}\cap\mathbf{N}}$};
+\node[xshift=10pt,yshift=10pt] at (current bounding box.south west) {$\emptyset$};
+\end{tikzpicture}
+\end{center}
+
+** Classification: True vs. False and Positive vs. Negative
+
+*** Confusion matrix 
+Example       based off   one story from   Aesop's Fables:
+\begin{table}[h!]
+\begin{tabular}{|l|l|}
+\hline
+\makecell[l]{\textbf{True Positive (TP):}\\
+Reality: A wolf threatened. \\
+Shepherd said: "Wolf." \\
+Outcome: Shepherd is a hero.   }         & 
+\makecell[l]{\textbf{False Positive (FP):}\\
+Reality: No wolf threatened. \\
+Shepherd said: "Wolf." \\
+Outcome: Villagers are \\ angry at shepherd for waking them up.}          \\ \hline
+\makecell[l]{\textbf{False Negative (FN):}\\
+Reality: A wolf threatened. \\
+Shepherd said: "No wolf." \\
+Outcome: The wolf ate all the sheep.}          & 
+\makecell[l]{\textbf{True Negative (TN):}\\
+Reality: No wolf threatened. \\
+Shepherd said: "No wolf." \\
+Outcome: Everyone is fine.  }                              \\ \hline
+\end{tabular}
+\end{table}
