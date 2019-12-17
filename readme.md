@@ -64,7 +64,7 @@ falaffel
 
 ## non edibles but essential
 Rubber bands      
-plastic bags (1or3 l)     
+plastic bags/zip (1l / 3l)     
 flaxseed oil(/canola oil)
 
 ## cooking rotation
