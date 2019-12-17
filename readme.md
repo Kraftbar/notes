@@ -65,7 +65,7 @@ falaffel
 ## non edibles but essential
 Rubber bands      
 plastic bags (1or3 l)     
-flaxseed oil(canola oil)
+flaxseed oil(/canola oil)
 
 ## cooking rotation
 cili con carne       
