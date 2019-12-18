@@ -71,7 +71,7 @@ flaxseed oil(/canola oil)
 ## cooking rotation
 cili con carne       
 bolognese      
-nudel suppe       
+nu ro mien       
 dandan (ish)       
 carbonara      
 #### might need extra eq
