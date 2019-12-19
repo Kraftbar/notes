@@ -71,7 +71,7 @@ flaxseed oil(/canola oil)
 round wood cutting board      
 
 Wooden spade      
-oven iron/stone      
+oven steel/stone      
 
 
 ## cooking rotation
@@ -90,3 +90,4 @@ indisk (finn ut hva en sånn generell ting heter)
 ### fish
 spain       
 china       
+ -black carp
