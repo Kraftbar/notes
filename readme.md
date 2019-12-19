@@ -65,8 +65,14 @@ falaffel
 
 ## non edibles but essential
 Rubber bands      
+ikea clips      
 plastic bags/zip (1l / 3l)     
-flaxseed oil(/canola oil)
+flaxseed oil(/canola oil)       
+round wood cutting board      
+
+Wooden spade      
+oven iron/stone      
+
 
 ## cooking rotation
 cili con carne       
