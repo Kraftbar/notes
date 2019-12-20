@@ -5,6 +5,11 @@
 > **[vala-lang](https://wiki.gnome.org/Projects/Vala)**    
 > **[wxwidgets](https://www.wxwidgets.org/)**      
 > **[fltk](https://www.fltk.org/)**     
+### ide
+> **[geany](https://www.geany.org/)**     
+
+
+
 ## plotting 
 > **[qcustomplot](https://www.qcustomplot.com/)**    
 > **[gnuplot-cpp](https://github.com/martinruenz/gnuplot-cpp)**    
