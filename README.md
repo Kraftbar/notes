@@ -7,7 +7,11 @@
 > **[fltk](https://www.fltk.org/)**     
 ### ide
 > **[geany](https://www.geany.org/)**     
+> **[Vala Tools](https://wiki.gnome.org/Projects/Vala/Tools)**       
 
+### bulding gui 
+> **[Qt Creator](https://www.qt.io/product)**       
+> **[Glade](https://glade.gnome.org/)**       
 
 
 ## plotting 
