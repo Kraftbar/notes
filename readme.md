@@ -74,6 +74,8 @@ steamer basket (竹蒸笼)
 Wooden spade      
 oven steel/stone      
 
+hand cake mixer       
+
 
 ## cooking rotation
 cili con carne       
