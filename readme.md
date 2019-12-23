@@ -1,6 +1,8 @@
 # cooking-r
 
 ## intressting stuff
+
+perilla seeds
 ### sugar cane
 Molasses (brown sugar?// byproduct of sugar cane processing)         
 ### foods
