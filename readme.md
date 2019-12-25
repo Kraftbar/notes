@@ -2,7 +2,6 @@
 
 ## intressting stuff
 
-perilla seeds
 ### sugar cane
 Molasses (brown sugar?// byproduct of sugar cane processing)         
 ### foods
@@ -27,11 +26,16 @@ Shaoxing wine
 Zhenjiang vinegar
 
 ### spice
+#### five 
 Star anise     
 cinnamon stick     
 Sichuan peppercorn (green)     
 Fennel seeds      
 Clove (nellik)     
+#### other
+perilla seeds
+Caraway Seed
+
 #### jp
 togarashi       
 
