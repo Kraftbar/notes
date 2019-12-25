@@ -8,6 +8,7 @@ Molasses (brown sugar?// byproduct of sugar cane processing)
 Pierogi (western dumplings?)        
 niang Pi 酿皮
 
+
 <br>
 
 ## asian essentials 
@@ -20,7 +21,7 @@ light soya sauce
 #### chili
 Siracha     
 chili oil     
-chili sauce (chili crisp) - lao gan ma   
+chili crisp sauce - lao gan ma   
 #### other
 Shaoxing wine     
 Zhenjiang vinegar
@@ -34,7 +35,10 @@ Fennel seeds
 Clove (nellik)     
 #### other
 perilla seeds          
-Caraway Seed              
+Caraway Seed             
+
+### veggies
+redroot gromwell       
 
 #### jp
 togarashi       
@@ -55,7 +59,7 @@ Chinese Bayberry 杨梅
 bok choy (xiao you cai)      
 bitter melon         
 
-### interesting
+### other
 gluten 烤麸    
 rock sugar      
 
