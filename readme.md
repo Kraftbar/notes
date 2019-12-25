@@ -38,7 +38,9 @@ perilla seeds
 Caraway Seed             
 
 ### veggies
-redroot gromwell       
+redroot gromwell (/Ya cai?)       
+               
+
 
 #### jp
 togarashi       
