@@ -33,8 +33,8 @@ Sichuan peppercorn (green)
 Fennel seeds      
 Clove (nellik)     
 #### other
-perilla seeds
-Caraway Seed
+perilla seeds          
+Caraway Seed              
 
 #### jp
 togarashi       
