@@ -66,7 +66,7 @@ gluten 烤麸
 rock sugar      
 
 ### goood dishes
-rice ball noodle      
+Rice noodle roll (Cheung Fun)       
 
 
 <br>
