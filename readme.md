@@ -66,6 +66,9 @@ redroot gromwell (/Ya cai?)
 gluten 烤麸    
 rock sugar      
 
+Mungbean flour       
+millet flour       
+
 ### goood dishes
 Rice noodle roll (Cheung Fun)       
 
