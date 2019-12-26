@@ -37,10 +37,6 @@ Clove (nellik)
 perilla seeds          
 Caraway Seed             
 
-### veggies
-redroot gromwell (/Ya cai?)       
-               
-
 
 #### jp
 togarashi       
@@ -60,6 +56,8 @@ Chinese Bayberry 杨梅
 ### vegetable
 bok choy (xiao you cai)      
 bitter melon         
+redroot gromwell (/Ya cai?)       
+               
 
 ### other
 gluten 烤麸    
