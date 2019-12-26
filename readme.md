@@ -83,12 +83,12 @@ plastic bags/zip (1l / 3l)
 flaxseed oil(/canola oil)       
 round wood cutting board        
 steamer basket (竹蒸笼)        
+bambo sheet non stick      
 
 Wooden spade      
 oven steel/stone      
 
-hand cake mixer       
-kitchen machine       
+hand cake mixer /kitchen machine (better, remember doe ok)         
 
 ## cooking rotation
 cili con carne       
