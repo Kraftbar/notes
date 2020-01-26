@@ -59,8 +59,7 @@ Chinese Bayberry 杨梅
 ### vegetable
 bok choy (xiao you cai)      
 bitter melon         
-redroot gromwell (/Ya cai?)       
-Preserved mustard cabbage
+Preserved mustard cabbage  (/Ya cai /redroot gromwell?)       
                
 
 ### other
