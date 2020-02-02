@@ -19,7 +19,11 @@ Tianmian sauce
 Hoisin sauce     
 Dou ban Jiang     
 black soya sauce     
-light soya sauce          
+light soya sauce       
+Fermented bean curd      
+Sweet bean sauce         
+
+
 
 #### chili
 Siracha     
@@ -27,8 +31,7 @@ chili oil
 chili crisp sauce - lao gan ma   
 #### other
 Shaoxing wine     
-Zhenjiang vinegar
-
+Zhenjiang vinegar         
 ### spice
 #### five 
 Star anise     
