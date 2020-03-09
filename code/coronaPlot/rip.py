@@ -3,17 +3,29 @@ dir_name=os.getcwd()
 test = os.listdir(dir_name)
 
 for item in test:
-    if item.endswith(".csv"):
+    if (item.endswith(".csv" ) or item.endswith(".html" ) ) :
         os.remove(os.path.join(dir_name, item))
 import wget
+# https://github.com/CSSEGISandData/COVID-19
 url = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv'
+url_update = 'https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series'
+
 filename = wget.download(url)
 
+filename = wget.download(url_update,"updatetimes.html")
 
 
-import matplotlib.pyplot as plt
+import re
+data =[]
+with open('updatetimes.html', 'r') as file:
+    data = file.read().replace('\n', '')    
+tags = re.findall(r'datetime="(.+?)"', data)
+updateDate = tags[-1]
+
+print(updateDate)
+# (?<=href=")[^"]*
 from pandas import read_csv
-import pandas as pd
+import matplotlib.pyplot as plt
 
 for item in test:
     if item.endswith(".csv"):
@@ -25,23 +37,24 @@ for item in test:
         i=0
 
         dataold=dataold.T
+        dataold=dataold.drop(['Others'], axis=1)
         lol=dataold.index[-1]
         dataold=dataold.T
         dataold=dataold.sort_values(lol,ascending=False)
-        print(dataold)
 
 
         dataold=dataold.T
-        print(dataold)
-        print("ok")
+        
         for (columnName, columnData) in dataold.iteritems():
             i=i+1
-            columnData.plot(label=columnName,legend="as")
+            if(i>1): # skip china
+                ts= columnData[28:-1].plot(label=columnName,legend="dummy")
             if(i==5):
                 break
-        plt.yscale("log")
-                
+        
+        plt.title("Updated on " + updateDate)
 
+#        plt.yscale("log")
 
  #       new = data["Country/Region"].copy() 
  #       data["Province/State"]= data["Province/State"].str.cat(new, sep =", ") 
