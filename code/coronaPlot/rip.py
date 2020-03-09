@@ -22,16 +22,22 @@ for item in test:
         dataold=dataold.drop(['Lat', 'Long',"Province/State"], axis=1)
         dataold=dataold.set_index("Country/Region")
         dataold=dataold.groupby("Country/Region").sum()
-        
-
         i=0
- #   
+
         dataold=dataold.T
+        lol=dataold.index[-1]
+        dataold=dataold.T
+        dataold=dataold.sort_values(lol,ascending=False)
+        print(dataold)
+
+
+        dataold=dataold.T
+        print(dataold)
+        print("ok")
         for (columnName, columnData) in dataold.iteritems():
             i=i+1
-            print(columnName)
             columnData.plot(label=columnName,legend="as")
-            if(i==20):
+            if(i==5):
                 break
         plt.yscale("log")
                 
