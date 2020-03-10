@@ -20,9 +20,8 @@ data =[]
 with open('updatetimes.html', 'r') as file:
     data = file.read().replace('\n', '')    
 tags = re.findall(r'datetime="(.+?)"', data)
-updateDate = tags[-1]
+updateDateTime = tags[-1]
 
-print(updateDate)
 # (?<=href=")[^"]*
 from pandas import read_csv
 import matplotlib.pyplot as plt
@@ -52,10 +51,13 @@ for item in test:
             if(i==5):
                 break
         
-        plt.title("Updated on " + updateDate)
+        updateDateTime = updateDateTime.split("T")
+        updateDate =updateDateTime[0].split("-")
+       
+        plt.title("Updated: " + updateDate[2] +"/"+updateDate[1] +", " + updateDateTime [1],fontsize=20)
 
 #        plt.yscale("log")
-
+#
  #       new = data["Country/Region"].copy() 
  #       data["Province/State"]= data["Province/State"].str.cat(new, sep =", ") 
  #       data=data.drop(['Lat', 'Long',"Country/Region"], axis=1)
