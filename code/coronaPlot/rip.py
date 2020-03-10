@@ -7,10 +7,11 @@ for item in test:
         os.remove(os.path.join(dir_name, item))
 import wget
 # https://github.com/CSSEGISandData/COVID-19
-url = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv'
+urlInfected = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv'
+urlDead= 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv'
 url_update = 'https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series'
 
-filename = wget.download(url)
+filename = wget.download(urlDead)
 
 filename = wget.download(url_update,"updatetimes.html")
 
@@ -47,7 +48,7 @@ for item in test:
         
         for (columnName, columnData) in dataold.iteritems():
             i=i+1
-            if(i>1 and i<6): # skip china
+            if(i>0 and i<4): # skip china
                 ts= columnData[28:-1].plot(style='o-',label=columnName,legend="dummy")
             if(columnName=="Norway"):
                 ts= columnData[28:-1].plot(style='o-',label=columnName,legend="dummy")
