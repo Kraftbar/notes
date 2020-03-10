@@ -47,7 +47,7 @@ for item in test:
         for (columnName, columnData) in dataold.iteritems():
             i=i+1
             if(i>1): # skip china
-                ts= columnData[28:-1].plot(label=columnName,legend="dummy")
+                ts= columnData[28:-1].plot(style='o-',label=columnName,legend="dummy")
             if(i==5):
                 break
         
