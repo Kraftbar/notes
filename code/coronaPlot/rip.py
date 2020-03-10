@@ -25,6 +25,7 @@ updateDateTime = tags[-1]
 # (?<=href=")[^"]*
 from pandas import read_csv
 import matplotlib.pyplot as plt
+plt.rcParams.update({'font.size': 20})
 
 for item in test:
     if item.endswith(".csv"):
@@ -46,17 +47,17 @@ for item in test:
         
         for (columnName, columnData) in dataold.iteritems():
             i=i+1
-            if(i>1): # skip china
+            if(i>1 and i<6): # skip china
                 ts= columnData[28:-1].plot(style='o-',label=columnName,legend="dummy")
-            if(i==5):
-                break
+            if(columnName=="Norway"):
+                ts= columnData[28:-1].plot(style='o-',label=columnName,legend="dummy")
         
         updateDateTime = updateDateTime.split("T")
         updateDate =updateDateTime[0].split("-")
        
-        plt.title("Updated: " + updateDate[2] +"/"+updateDate[1] +", " + updateDateTime [1],fontsize=20)
+        plt.title("Updated: " + updateDate[2] +"/"+updateDate[1] +", " + updateDateTime [1],fontsize=22)
 
-#        plt.yscale("log")
+        plt.yscale("log")
 #
  #       new = data["Country/Region"].copy() 
  #       data["Province/State"]= data["Province/State"].str.cat(new, sep =", ") 
