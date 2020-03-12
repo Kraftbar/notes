@@ -11,7 +11,8 @@ urlInfected = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/
 urlDead= 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv'
 url_update = 'https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series'
 
-filename = wget.download(urlDead)
+filename = wget.download(urlInfected )
+filename = wget.download(urlDead )
 
 filename = wget.download(url_update,"updatetimes.html")
 
@@ -23,13 +24,26 @@ with open('updatetimes.html', 'r') as file:
 tags = re.findall(r'datetime="(.+?)"', data)
 updateDateTime = tags[-1]
 
+def firstNonZero(column):
+    
+    i=0
+    for el in column:
+        i=i+1
+        if(el != 0):
+            break
+    return i
+
+updateDateTime = updateDateTime.split("T")
+updateDate =updateDateTime[0].split("-")
 # (?<=href=")[^"]*
 from pandas import read_csv
 import matplotlib.pyplot as plt
 plt.rcParams.update({'font.size': 20})
-
+pltNum=1
 for item in test:
     if item.endswith(".csv"):
+        print("asdasd")
+        plt.figure(pltNum)
         data = read_csv(item)
         dataold=data
         dataold=dataold.drop(['Lat', 'Long',"Province/State"], axis=1)
@@ -38,7 +52,7 @@ for item in test:
         i=0
 
         dataold=dataold.T
-        dataold=dataold.drop(['Others'], axis=1)
+
         lol=dataold.index[-1]
         dataold=dataold.T
         dataold=dataold.sort_values(lol,ascending=False)
@@ -48,17 +62,17 @@ for item in test:
         
         for (columnName, columnData) in dataold.iteritems():
             i=i+1
-            if(i>0 and i<4): # skip china
-                ts= columnData[28:-1].plot(style='o-',label=columnName,legend="dummy")
+            first=firstNonZero(columnData)
+            if(i>1 and i<7): # skip china
+                ts= columnData[30:-1].plot(style='o-',label=columnName,legend="dummy")
             if(columnName=="Norway"):
-                ts= columnData[28:-1].plot(style='o-',label=columnName,legend="dummy")
+                ts= columnData[30:-1].plot(style='o-',label=columnName,legend="dummy")
         
-        updateDateTime = updateDateTime.split("T")
-        updateDate =updateDateTime[0].split("-")
-       
-        plt.title("Updated: " + updateDate[2] +"/"+updateDate[1] +", " + updateDateTime [1],fontsize=22)
+        plt.grid()
 
-        plt.yscale("log")
+        plt.title(item.replace('time_series_','').replace('.csv',', ')+"    Updated: " + updateDate[2] +"/"+updateDate[1] +", " + updateDateTime [1],fontsize=22)
+        pltNum=pltNum+1
+#        plt.yscale("log")
 #
  #       new = data["Country/Region"].copy() 
  #       data["Province/State"]= data["Province/State"].str.cat(new, sep =", ") 
