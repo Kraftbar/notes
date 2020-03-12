@@ -40,10 +40,12 @@ from pandas import read_csv
 import matplotlib.pyplot as plt
 plt.rcParams.update({'font.size': 20})
 pltNum=1
+fig = plt.figure() 
+
 for item in test:
     if item.endswith(".csv"):
+        plt1 = fig.add_subplot(210+pltNum) 
         print("asdasd")
-        plt.figure(pltNum)
         data = read_csv(item)
         dataold=data
         dataold=dataold.drop(['Lat', 'Long',"Province/State"], axis=1)
@@ -72,6 +74,10 @@ for item in test:
 
         plt.title(item.replace('time_series_','').replace('.csv',', ')+"    Updated: " + updateDate[2] +"/"+updateDate[1] +", " + updateDateTime [1],fontsize=22)
         pltNum=pltNum+1
+        
+
+figManager = plt.get_current_fig_manager()
+figManager.window.showMaximized()
 #        plt.yscale("log")
 #
  #       new = data["Country/Region"].copy() 
