@@ -44,7 +44,7 @@ fig = plt.figure()
 
 for item in test:
     if item.endswith(".csv"):
-        plt1 = fig.add_subplot(210+pltNum) 
+        plt1 = fig.add_subplot(120+pltNum) 
         print("asdasd")
         data = read_csv(item)
         dataold=data
@@ -65,7 +65,7 @@ for item in test:
         for (columnName, columnData) in dataold.iteritems():
             i=i+1
             first=firstNonZero(columnData)
-            if(i>1 and i<7): # skip china
+            if(i>1 and i<5): # skip china
                 ts= columnData[30:-1].plot(style='o-',label=columnName,legend="dummy")
             if(columnName=="Norway"):
                 ts= columnData[30:-1].plot(style='o-',label=columnName,legend="dummy")
@@ -76,9 +76,10 @@ for item in test:
         pltNum=pltNum+1
         
 
+        plt.yscale("log")   
+
 figManager = plt.get_current_fig_manager()
 figManager.window.showMaximized()
-#        plt.yscale("log")
 #
  #       new = data["Country/Region"].copy() 
  #       data["Province/State"]= data["Province/State"].str.cat(new, sep =", ") 
