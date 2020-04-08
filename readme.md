@@ -97,6 +97,7 @@ steamer basket (竹蒸笼)
 bambo sheet non stick      
 
 Wooden spade      
+Wooden cutting board (37x37x4)cm      
 oven steel/stone      
 
 hand cake mixer /kitchen machine (better, remember doe ok)         
