@@ -92,9 +92,9 @@ Rubber bands
 ikea clips      
 plastic bags/zip (1l / 3l)     
 flaxseed oil(/canola oil)       
-round wood cutting board        
 steamer basket (竹蒸笼)        
 bambo sheet non stick      
+Steel / iron le creuset set       
 
 Wooden spade      
 Wooden cutting board (37x37x4)cm      
