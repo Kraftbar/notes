@@ -73,7 +73,7 @@ for item in test:
         
         plt.grid()
 
-        plt.title(item.replace('time_series_','').replace('.csv',', ')+"    Updated: " + updateDate[2] +"/"+updateDate[1] +", " + updateDateTime [1],fontsize=22)
+        plt.title(item.replace('time_series_','').replace('.csv',', ')+"    Updated: " + updateDate[2] +"/"+updateDate[1] +", " + updateDateTime [1],fontsize=17)
         pltNum=pltNum+1
         
 
