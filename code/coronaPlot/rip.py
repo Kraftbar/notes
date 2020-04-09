@@ -7,8 +7,8 @@ for item in test:
         os.remove(os.path.join(dir_name, item))
 import wget
 # https://github.com/CSSEGISandData/COVID-19
-urlInfected = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv'
-urlDead= 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv'
+urlInfected = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv'
+urlDead= 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv'
 url_update = 'https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series'
 
 filename = wget.download(urlInfected )
@@ -54,6 +54,7 @@ for item in test:
         i=0
 
         dataold=dataold.T
+        dataold=dataold.drop(['China'], axis=1)
 
         lol=dataold.index[-1]
         dataold=dataold.T
@@ -65,10 +66,10 @@ for item in test:
         for (columnName, columnData) in dataold.iteritems():
             i=i+1
             first=firstNonZero(columnData)
-            if(i>1 and i<5): # skip china
-                ts= columnData[30:-1].plot(style='o-',label=columnName,legend="dummy")
+            if(i<6): # skip china
+                ts= columnData[30:(len(columnData)+15)].plot(style='o-',label=columnName,legend="dummy")
             if(columnName=="Norway"):
-                ts= columnData[30:-1].plot(style='o-',label=columnName,legend="dummy")
+                ts= columnData[30:(len(columnData)+15)].plot(style='o-',label=columnName,legend="dummy")
         
         plt.grid()
 
@@ -76,10 +77,11 @@ for item in test:
         pltNum=pltNum+1
         
 
-        plt.yscale("log")   
+        plt.yscale("log")
 
 figManager = plt.get_current_fig_manager()
-figManager.window.showMaximized()
+fig.set_size_inches(18.5, 10.5)
+plt.savefig('plot.svg')
 #
  #       new = data["Country/Region"].copy() 
  #       data["Province/State"]= data["Province/State"].str.cat(new, sep =", ") 
