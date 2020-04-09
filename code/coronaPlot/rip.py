@@ -66,7 +66,7 @@ for item in test:
         for (columnName, columnData) in dataold.iteritems():
             i=i+1
             first=firstNonZero(columnData)
-            if(i<6): # skip china
+            if(i<3): # skip china
                 ts= columnData[30:(len(columnData)+15)].plot(style='o-',label=columnName,legend="dummy")
             if(columnName=="Norway"):
                 ts= columnData[30:(len(columnData)+15)].plot(style='o-',label=columnName,legend="dummy")
