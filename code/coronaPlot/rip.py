@@ -38,7 +38,7 @@ updateDate =updateDateTime[0].split("-")
 # (?<=href=")[^"]*
 from pandas import read_csv
 import matplotlib.pyplot as plt
-plt.rcParams.update({'font.size': 20})
+plt.rcParams.update({'font.size': 12})
 pltNum=1
 fig = plt.figure() 
 
@@ -73,14 +73,14 @@ for item in test:
         
         plt.grid()
 
-        plt.title(item.replace('time_series_','').replace('.csv',', ')+"    Updated: " + updateDate[2] +"/"+updateDate[1] +", " + updateDateTime [1],fontsize=17)
+        plt.title(item.replace('time_series_','').replace('.csv',', ')+"\n    Updated: " + updateDate[2] +"/"+updateDate[1] +", " + updateDateTime [1],fontsize=14)
         pltNum=pltNum+1
         
 
         plt.yscale("log")
 
 figManager = plt.get_current_fig_manager()
-fig.set_size_inches(18.5, 10.5)
+fig.set_size_inches(12, 6)
 plt.savefig('plot.svg')
 #
  #       new = data["Country/Region"].copy() 
