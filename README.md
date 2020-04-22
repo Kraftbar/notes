@@ -8,6 +8,8 @@
 ### ide
 > **[geany](https://www.geany.org/)**     
 > **[Vala Tools](https://wiki.gnome.org/Projects/Vala/Tools)**       
+> **[FLUID](https://en.wikipedia.org/wiki/FLUID)**       
+
 
 ### bulding gui 
 > **[Qt Creator](https://www.qt.io/product)**       
