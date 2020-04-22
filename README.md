@@ -8,12 +8,13 @@
 ### ide
 > **[geany](https://www.geany.org/)**     
 > **[Vala Tools](https://wiki.gnome.org/Projects/Vala/Tools)**       
-> **[FLUID](https://en.wikipedia.org/wiki/FLUID)**       
 
 
 ### bulding gui 
 > **[Qt Creator](https://www.qt.io/product)**       
 > **[Glade](https://glade.gnome.org/)**       
+> **[FLUID](https://en.wikipedia.org/wiki/FLUID)**       
+> **[XRCed (wx)](https://wiki.wxpython.org/XRCed%20Tutorial)**       
 
 
 ## plotting 
