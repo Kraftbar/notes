@@ -1,6 +1,14 @@
 # -*- coding: utf-8 -*-
 # for Python3 (needs Unicode)
 
+"""
+TODO:
+ - Needs relative dir in final naming
+ - Needs to consider empty folders
+ - Also, test linux platfrom 
+ - also check if it is considering filename length cap (win/linux)
+"""
+
 import os, shutil, sys
 
 def splitPath(p):
