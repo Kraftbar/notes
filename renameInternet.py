@@ -13,15 +13,13 @@ import os, shutil, sys
 
 def splitPath(p):
     """Returns a list of folder names in path to p
-
-    From user1556435 at http://stackoverflow.com/questions/3167154/how-to-split-a-dos-path-into-its-components-in-python"""
+    """
     a,b = os.path.split(p)
     return (splitPath(a) if len(a) and len(b) else []) + [b]
 
 def safeprint(s):
-    """This is needed to prevent the Windows console (command line) from choking on Unicode characters in paths.
-    
-    From Giampaolo Rodolà at http://stackoverflow.com/questions/5419/python-unicode-and-the-windows-console"""
+    """This is needed to prevent the Windows console from choking on Unicode characters in paths.
+    """
     try:
         print(s)
     except UnicodeEncodeError:
@@ -78,7 +76,7 @@ def flatten(root, doit):
     if doit:
         print("Done.")        
     else:
-        print("Simulation complete.")
+        print("Test complete.")
 
 
     print("Moved files:", fileCount)
@@ -87,9 +85,7 @@ def flatten(root, doit):
 if __name__ == "__main__":
     print("")
 
-    print("Flatten v1.00 (c) 2014 Nerdfever.com")
-    print("Use and modification permitted without limit; credit to NerdFever.com requested.")
-
+ 
     if len(sys.argv) < 2:
         print("Flattens all files in a path recursively, moving them all to the")
         print("root folder, renaming based on the path to the original folder.")
