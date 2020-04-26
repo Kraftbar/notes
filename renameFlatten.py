@@ -99,7 +99,7 @@ def flatten(dirInpt, doit):
                 os.rmdir(path)
             folderCount += 1
 
-    print 
+
     for line in  outLog2 +outLog1:
         safeprint(line)
 
