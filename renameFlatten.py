@@ -3,7 +3,7 @@
 
 """
 TODO:
- - Needs relative dir in final naming
+ - Needs relative dir in final naming ****
  - Needs to consider empty folders
  - Also, test linux platfrom 
  - also check if it is considering filename length cap (win/linux) 
@@ -29,43 +29,58 @@ def safeprint(s):
         else:
             print(s.encode('utf8'))
 
-def flatten(root, doit):
-    """Flattens a directory by moving all nested files up to the root and renaming uniquely based on the original path.
+def flatten(dirInpt, doit):
+    """Flattens a directory by moving all nested files up to the dirInpt and renaming uniquely based on the original path.
     Converts all occurances of "SEP" to "REPL" in names (this allows un-flatting later, but at the cost of the replacement).
     
     If doit is True, does action; otherwise just simulates.
     
     """
     
-    SEP  = "_"
+    SEP  = "__"
     REPL = "?"
 
     folderCount = 0
     fileCount = 0
 
+    ## reused code, for deleting the abs folder 
+    # 
+    sp = splitPath(dirInpt)
+    np = ""
+    for element in sp[1:]:
+        e2 = element.replace(SEP, REPL)
+        np += e2 + SEP
+    dirInptnewName = np 
+    #
+    
     if not doit:
         print("Simulating:")
 
-    for path, dirs, files in os.walk(root, topdown=False):
+    for path, dirs, files in os.walk(dirInpt, topdown=False): 
 
-        if path != root:
+    
+        if path != dirInpt: # this needed?
+                     
+
 
             for f in files:
-
+                #
                 sp = splitPath(path)
-
                 np = ""
 
                 for element in sp[1:]:
                     e2 = element.replace(SEP, REPL)
                     np += e2 + SEP
-
                 f2 = f.replace(SEP, REPL)
-                newName = np + f2
+                newNameAbs = np + f2
+                #
+                
+                
+                newNameRel=newNameAbs.replace(dirInptnewName, "")
 
-                safeprint("Moved:   "+ newName )
+                safeprint("Moved:   "+ newNameRel )
                 if doit:
-                    shutil.move(os.path.join(path, f), os.path.join(root, newName))
+                    shutil.move(os.path.join(path, f), os.path.join(dirInpt, newNameRel))
                 fileCount += 1
 
             safeprint("Removed: "+ path)
@@ -76,7 +91,7 @@ def flatten(root, doit):
     if doit:
         print("Done.")        
     else:
-        print("Test complete.")
+        print("Test case complete.")
 
 
     print("Moved files:", fileCount)
@@ -84,13 +99,16 @@ def flatten(root, doit):
     input("Press Enter to continue...")
 
 if __name__ == "__main__":
+    print("Please input the folder that needs flattening. When confident on action add keyword 'DOIT'.")
+    print("Or press Enter to exit...")
     print("")
-    print("Hello World")
-    input()
- 
-    if len(sys.argv) < 2:
+    sysargv=input()
+    sysargv=sysargv.split(" ")  
+
+    print(sysargv)
+    if len(sysargv) < 1:
         print("Flattens all files in a path recursively, moving them all to the")
-        print("root folder, renaming based on the path to the original folder.")
+        print("dirInpt folder, renaming based on the path to the original folder.")
         print("Removes all now-empty subfolders of the given path.")
         print("")
         print("Syntax: flatten [path] [DOIT]")
@@ -101,7 +119,7 @@ if __name__ == "__main__":
         print("  flatten //machine/path/bar DOIT     Actually flattens given path")
         input("Press Enter to continue...")
     else:
-        if len(sys.argv) == 3 and sys.argv[2] == "DOIT":
-            flatten(sys.argv[1], True)
+        if len(sysargv) == 2 and sysargv[1] == "DOIT":
+            flatten(sysargv[0], True)
         else:
-            flatten(sys.argv[1], False)
+            flatten(sysargv[0], False)
