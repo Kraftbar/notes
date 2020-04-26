@@ -10,7 +10,7 @@ TODO:
         Windows can't exceed MAX_PATH value (259 characters for files, 248 for folders).
 """
 
-import os, shutil, sys
+import os, shutil, sys, time
 
 def splitPath(p):
     """Returns a list of folder names in path to p
@@ -31,7 +31,6 @@ def safeprint(s):
 
 def flatten(root, doit):
     """Flattens a directory by moving all nested files up to the root and renaming uniquely based on the original path.
-
     Converts all occurances of "SEP" to "REPL" in names (this allows un-flatting later, but at the cost of the replacement).
     
     If doit is True, does action; otherwise just simulates.
@@ -82,10 +81,12 @@ def flatten(root, doit):
 
     print("Moved files:", fileCount)
     print("Removed folders:", folderCount)
+    input("Press Enter to continue...")
 
 if __name__ == "__main__":
     print("")
-
+    print("Hello World")
+    input()
  
     if len(sys.argv) < 2:
         print("Flattens all files in a path recursively, moving them all to the")
@@ -98,6 +99,7 @@ if __name__ == "__main__":
         print("Examples:")
         print("  flatten //machine/path/foo          Simulates flattening all contents of the given path")
         print("  flatten //machine/path/bar DOIT     Actually flattens given path")
+        input("Press Enter to continue...")
     else:
         if len(sys.argv) == 3 and sys.argv[2] == "DOIT":
             flatten(sys.argv[1], True)
