@@ -3,7 +3,7 @@
 
 """
 TODO:
- - Needs relative dir in final naming ****
+ - Needs relative dir in final naming
  - Needs to consider empty folders
  - Also, test linux platfrom 
  - also check if it is considering filename length cap (win/linux) 
@@ -42,7 +42,10 @@ def flatten(dirInpt, doit):
 
     folderCount = 0
     fileCount = 0
+    
 
+    outLog1=[]
+    outLog2=[]
     ## reused code, for deleting the abs folder 
     # 
     sp = splitPath(dirInpt)
@@ -78,15 +81,26 @@ def flatten(dirInpt, doit):
                 
                 newNameRel=newNameAbs.replace(dirInptnewName, "")
 
-                safeprint("Moved:   "+ newNameRel )
+                outLog1.append("Moved:       "+ dirInpt+"__"+newNameRel )
                 if doit:
                     shutil.move(os.path.join(path, f), os.path.join(dirInpt, newNameRel))
                 fileCount += 1
 
-            safeprint("Removed: "+ path)
+            # regex on path but dirInpt
+            #
+            newpath=path.replace(dirInpt,'').replace('\\',"\\\\")
+            outLog2.append("Dir removed: "+dirInpt+newpath)
+
+
+
+
             if doit:
                 os.rmdir(path)
             folderCount += 1
+
+    print 
+    for line in  outLog2 +outLog1:
+        safeprint(line)
 
     if doit:
         print("Done.")        
