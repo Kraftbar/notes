@@ -82,6 +82,7 @@ def flatten(dirInpt, doit):
                 newNameRel=newNameAbs.replace(dirInptnewName, "")
 
                 outLog1.append("Moved:       "+ dirInpt+"__"+newNameRel )
+                # todo: break if newNameRel exceeds the win size
                 if doit:
                     shutil.move(os.path.join(path, f), os.path.join(dirInpt, newNameRel))
                 fileCount += 1
