@@ -6,7 +6,8 @@ TODO:
  - Needs relative dir in final naming
  - Needs to consider empty folders
  - Also, test linux platfrom 
- - also check if it is considering filename length cap (win/linux)
+ - also check if it is considering filename length cap (win/linux) 
+        Windows can't exceed MAX_PATH value (259 characters for files, 248 for folders).
 """
 
 import os, shutil, sys
