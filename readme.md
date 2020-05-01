@@ -96,9 +96,10 @@ steamer basket (竹蒸笼)
 bambo sheet non stick      
 Steel / iron le creuset set       
 
-Wooden spade      
+Wooden/steel spade      
 Wooden cutting board (37x37x4)cm      
-oven steel/stone      
+Oven steel/stone      
+Plastic wrapping      
 
 hand cake mixer /kitchen machine (better, remember doe ok)         
 
