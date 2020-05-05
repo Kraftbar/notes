@@ -118,10 +118,10 @@ if __name__ == "__main__":
     print("Or press Enter to exit...")
     print("")
     sysargv=input()
-    sysargv=sysargv.split(" ")  
-
+    
+    doit=sysargv.split(" ")  
     print(sysargv)
-    if len(sysargv) < 1:
+    if sysargv=='':
         print("Flattens all files in a path recursively, moving them all to the")
         print("dirInpt folder, renaming based on the path to the original folder.")
         print("Removes all now-empty subfolders of the given path.")
@@ -134,7 +134,8 @@ if __name__ == "__main__":
         print("  flatten //machine/path/bar DOIT     Actually flattens given path")
         input("Press Enter to continue...")
     else:
-        if len(sysargv) == 2 and sysargv[1] == "DOIT":
-            flatten(sysargv[0], True)
+        if len(sysargv) >10 and doit[-1]=="DOIT":
+            sysargv=sysargv.replace(" DOIT",'')
+            flatten(sysargv, True)
         else:
-            flatten(sysargv[0], False)
+            flatten(sysargv, False)
