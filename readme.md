@@ -52,7 +52,7 @@ togarashi
 Durian      
 Jackfruit (South)    
 Longan/ Dragon eye    
-Licu       
+Lychee        
 Purple Mangosteen 山竹     
 Pitaya, or “Dragon Fruit” 火龙果           
 #### not tried
