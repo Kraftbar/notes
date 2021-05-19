@@ -1,18 +1,21 @@
 import boto3
 import time
 
+f = open("input", "r")
+lines= f.readlines()
+txt="".join(lines)
+
 ##
 # make sure to config "~/.aws/config" and "~/.aws/credentials"
-
 
 #polly_client = boto3.Session(aws_access_key_id='',aws_secret_access_key='', region_name='eu-north-1').client('polly')
 polly_client = boto3.Session().client('polly')
 time.sleep(0.8)
-response = polly_client.start_speech_synthesis_task(VoiceId='Joanna',
+response = polly_client.start_speech_synthesis_task(VoiceId='Brian',
                 OutputS3BucketName='mytest9752635',
                 OutputS3KeyPrefix='5a4365a713a9a28144cae362e50fceed47dab84db405a5c7d4a6b216176ac50d',
                 OutputFormat='mp3', 
-                Text = 'This is a sample text to be synthesized.')
+                Text = txt)
 
 OutputUri = response['SynthesisTask']['OutputUri']
 taskId =    response['SynthesisTask']['TaskId']
