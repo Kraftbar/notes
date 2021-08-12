@@ -82,11 +82,12 @@ Still not convinced? Take a 100 doors, would you still switch?
 ** Random prosesses
    
 *** Random walk
-  
+  #+BEGIN_COMMENT
   \begin{tikzpicture}
   \node[anchor=center,inner sep=0,every picture/.style={draw=red, thick}](randdes)
       {\RandomWalk {number=800, angles = {0, 90, 180, 270}, degrees}};
   \end{tikzpicture}
+#+END_COMMENT
 
 *** makrov chian 
 The makrov property/ assumption
@@ -137,11 +138,8 @@ $$
 	minor tick num=3,
 	axis y line=left,
 	axis x line=middle,
-	xlabel=$x$,ylabel=$\sin x$
+	xlabel=$x$,ylabel=$y$
 	]
-	\addplot[smooth,blue,mark=none,
-		 domain=-8:8,samples=40] 
-		{1/(4*sqrt(2*pi))*exp(-((x-0)^2)/(2*4^2))};
 	\addplot[smooth,blue,mark=none,
 		 domain=-8:8,samples=40] 
 		{1/(pi*3*(1+((x-0)/3)^2))};
@@ -158,7 +156,7 @@ $$
 	minor tick num=3,
 	axis y line=left,
 	axis x line=middle,
-	xlabel=$x$,ylabel=$\sin x$
+	xlabel=$x$,ylabel=$y$
 	]
 	\addplot[smooth,blue,mark=none,
 		 domain=-8:8,samples=40] 
@@ -174,7 +172,7 @@ $$
 	minor tick num=3,
 	axis y line=left,
 	axis x line=middle,
-	xlabel=$x$,ylabel=$\sin x$
+	xlabel=$x$,ylabel=$y$
 	]
 	\addplot[smooth,blue,mark=none,
 		 domain=-8:8,samples=40] 
@@ -219,11 +217,7 @@ $$
 
 \newpage
 
-* Ordbok
-** Vehicles
-RPAS 
-AUV 
-ROV
+
 
 * Moving average / moving variance 
 Digital filter
@@ -242,7 +236,7 @@ y'_k &=y_{k}\frac{1}{n}+y_{k-1}\frac{1}{n}+y_{k-2}\frac{1}{n}+\dots+y_{k-n+1}\fr
 \end{align*}
 
 
-** analyse of 6 
+** Aanalyse of 6 
 \begin{equation}
 \begin{aligned}
 &y(k)=\frac{1}{N+1} \sum_{n=0}^{n} u(k-n)\\
@@ -268,6 +262,17 @@ Frekvens respons (demping)
 \end{equation}
 
 
+
+* moving avrage   continued
+
+\begin{align}
+X^{AR}_{t}&=c  + \varepsilon _{t}      &+ \sum _{i=1}^{p}\varphi _{i}X_{t-i} .\,                 &                                                 \\
+X^{MA}_{t}&=\mu + \varepsilon _{t}     &                                                         &+ \sum_{i=1}^{q}\theta _{i}\varepsilon _{t-i}\,  \\
+X^{ARMA}_{t}&=  c+\varepsilon _{t}     &+ \sum _{i=1}^{p}\varphi _{i}X_{t-i}                     &+ \sum_{i=1}^{q}\theta _{i}\varepsilon_{t-i}.\,  
+\end{align}
+
+ARIMA
+
 * Chaos and Bifurcations
 ** example
 $\ddot{x}+0.1 \dot{x}+x^{5}=6 \sin t$
@@ -281,4 +286,3 @@ from x 0 to 50
 * to be added
 winer process 
 markov process
-random walk
