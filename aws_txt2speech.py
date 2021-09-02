@@ -9,6 +9,7 @@ try:
     f = open("input.txt", "r")
     lines= f.readlines()
     txt="".join(lines)
+# needs testing!!
 except FileNotFoundError:
     print("reading from stdin")
     txt = sys.stdin.read()
