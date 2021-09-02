@@ -12,12 +12,19 @@
 >   ```
 
 
+ ~/.aws/config
 ```
-config
 [default]
 region=eu-north-1
 ```
 
+Generate aws_access_key_id and aws_secret_access_key
+- Go to your AWS account overview           
+- Account menu in the upper-right (has your name on it)         
+- sub-menu: Security Credentials           
+
+
+~/.aws/credentials
 ```
 credentials
 [default]
