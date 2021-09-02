@@ -47,7 +47,7 @@ s3 = boto3.client('s3')
 print("Downloading...")
 s3.download_file('mytest9752635',objectName,'out.mp3')
 time.sleep(2)
-print("Deleting...")
+print("Deleting s3 object...")
 s3.delete_object(Bucket='mytest9752635',Key=objectName)
 
 
