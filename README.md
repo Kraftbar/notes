@@ -1,7 +1,7 @@
 # aws-r
 
 
-## Make sure to configure AWS
+ Make sure to configure AWS
 
 
 
@@ -17,6 +17,7 @@ config
 [default]
 region=eu-north-1
 `
+
 `
 credentials
 [default]
