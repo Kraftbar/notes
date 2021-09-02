@@ -7,8 +7,8 @@
 
 >   ```sh
 > mkdir ~/.aws/
-> tocuh ~/.aws/config
-> tocuh ~/.aws/credentials
+> touch ~/.aws/config
+> touch ~/.aws/credentials
 >   ```
 
 
