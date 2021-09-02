@@ -4,19 +4,22 @@ import sys
 
 
 
+
 print("Hello World!")
 try:
     f = open("input.txt", "r")
     lines= f.readlines()
     txt="".join(lines)
-# needs testing!!
-except FileNotFoundError:
-    print("reading from stdin")
-    txt = sys.stdin.read()
 except :
-    print("To use the program please paste text into .input.txt or use a pipe")
-    print("exiting....")
-    sys.exit()
+    if not sys.stdin.isatty():
+        print("reading from stdin")
+        print("reading from stdin")
+        txt = sys.stdin.read()
+    else:
+        print("To use the program please paste text into .input.txt or use a pipe")
+        print("exiting....")
+        sys.exit()
+
 
 
 
