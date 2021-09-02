@@ -6,13 +6,16 @@ import sys
 
 print("Hello World!")
 try:
-    f = open("input", "r")
+    f = open("input.txt", "r")
     lines= f.readlines()
     txt="".join(lines)
-except:
+except FileNotFoundError:
     print("reading from stdin")
     txt = sys.stdin.read()
-
+except :
+    print("To use the program please paste text into .input.txt or use a pipe")
+    print("exiting....")
+    sys.exit()
 
 
 
