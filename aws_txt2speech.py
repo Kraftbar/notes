@@ -1,6 +1,7 @@
 import boto3
 import time
 import sys
+import os
 
 
 print("Hello World!")
@@ -41,12 +42,11 @@ objectName=OutputUri.split("/")[-1]
 print(taskId)
 current_task_status=''
 while(current_task_status != 'completed'):
-    print("waiting for rendering ...")
     task_status = polly_client.get_speech_synthesis_task(TaskId = taskId)
-    time.sleep(0.8)
     current_task_status=task_status['SynthesisTask']['TaskStatus']
+    os.system("notify-send -t 50 --hint int:transient:1 'aws_txt2speech' "+"'"+"waiting for rendering ... \n "+current_task_status+"'") 
     print(current_task_status)
-    time.sleep(0.8)
+    time.sleep(4)
 
 
 #s3 =  boto3.client('s3',aws_access_key_id='',aws_secret_access_key='')
