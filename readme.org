@@ -359,4 +359,5 @@ Outcome: Everyone is fine.  }                              \\ \hline
 2. f(f)=t^n (n el natural num) - polymonial     \\
 3. f(f)=t^c  - ??     \\
 
+https://en.wikipedia.org/wiki/Wheat_and_chessboard_problem
 
