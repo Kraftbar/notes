@@ -11,9 +11,7 @@
 
 
 
-Things i keep forgetting
-#+ATTR_LaTeX: :height 0.2\textwidth :center
-[[./imgs/5332.png]]
+
 
 * Norms
 ** def
