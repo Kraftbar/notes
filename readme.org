@@ -352,3 +352,13 @@ Shepherd said: "No wolf." \\
 Outcome: Everyone is fine.  }                              \\ \hline
 \end{tabular}
 \end{table}
+
+
+
+
+## ranodm
+1. f(f)=c^t - exponential  \\    
+2. f(f)=t^n (n el natural num) - polymonial     \\
+3. f(f)=t^c  - ??     \\
+
+
