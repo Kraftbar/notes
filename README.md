@@ -34,3 +34,7 @@
 
 ## Graphics
 > **[skia](https://github.com/google/skia)** 
+
+## youtube resources
+[c++ microsoft](https://www.youtube.com/playlist?list=PLB_QFf1fzn9O_22Q-P4xNajxIlbY3aCQk)             
+
