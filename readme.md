@@ -120,3 +120,9 @@ indisk (finn ut hva en sånn generell ting heter)
 spain       
 china       
  -black carp
+ 
+ 
+ 
+ 
+https://en.wikipedia.org/wiki/Template:Smoke_point_of_cooking_oils           
+
