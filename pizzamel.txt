@@ -1,8 +1,8 @@
 Caputo 
 ------
-Caputo Pizzeria	    12.5% - W 260/270 - (oda) 
+Caputo Pizzeria	    12.5% - W 260/270 - (meny/oda) 
 Caputo Nuvola       12,5% - W 260/280 - (oda) 
-Caputo Chef’s       13%   - W 300/320 - (oluf)
+Caputo Cuoco        13%   - W 300/320 - (meny)
 Caputo Manitoba Oro 14,5% - W 370/390 - (oda)
 
 DALLARI
@@ -29,11 +29,3 @@ w280-320        :  60-80%  hydrering
 w320-360        :  65-80%  hydrering
 w360-400        :  70-100% hydrering
 w400-440        :  80-100% hydrering
-
-9-10 % protein  :  w90-220
-10-11% protein  :  w160-240
-11-12% protein  :  w220-260
-12-13% protein  :  w240-290 
-13-14% protein  :  w270-340
-14-15% protein  :  w320-430
-15-16% protein  :  w360-400++
