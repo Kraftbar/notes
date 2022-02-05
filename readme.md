@@ -123,23 +123,23 @@ china
  
 ## pizza
 Caputo        
-------     
+\------     
 Caputo Pizzeria	    12.5% - W 260/270 - (meny/oda)          
 Caputo Nuvola       12,5% - W 260/280 - (oda)          
 Caputo Cuoco        13%   - W 300/320 - (meny)         
 Caputo Manitoba Oro 14,5% - W 370/390 - (oda)         
          
 DALLARI         
---------         
+\--------         
 DALLARI VERDE             - W 220     - (meny)         
 DALLARI BLU               - W 230     - (meny)         
          
 Møllerens          
--------         
+\-------         
 Møllerens Pizzamel        - (W 180-220?)         
          
 Villa Paradiso         
--------         
+\-------         
 Pizzamel          
          
          
