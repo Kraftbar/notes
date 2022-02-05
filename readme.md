@@ -78,7 +78,7 @@ Salt
 
 ## obscure food items
 
-## Kitchen accessories
+### Kitchen accessories
 Rubber bands      
 ikea clips      
 plastic bags/zip (1l / 3l)     
@@ -95,7 +95,7 @@ Plastic wrapping
 hand cake mixer /kitchen machine          
 
 
-#### jp
+### jp
 togarashi       
 
 ### fruit 
@@ -124,13 +124,7 @@ Alkaline Water
 Molasses          
 Pierogi     
 
-
-<br>
-
-## foods
-### chickbeans
-hummus   
-falaffel     
+ 
 
 ## Cooking rotation
 cili con carne       
