@@ -141,9 +141,5 @@ hand cake mixer /kitchen machine
 cili con carne       
 bolognese      
 carbonara      
-#### might need extra eq
-pizza     
-stir fry       
-
 
 
