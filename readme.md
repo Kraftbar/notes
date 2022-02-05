@@ -95,8 +95,8 @@ Lychee
 Purple Mangosteen      
 Pitaya, or “Dragon Fruit”            
 #### not tried
-Rambutan 红毛丹    
-Chinese Bayberry      
+Rambutan     
+Bayberry      
 
 ### vegetable
 bok choy       
