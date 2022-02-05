@@ -154,8 +154,44 @@ w320-360        :  65-80%  hydrering
 w360-400        :  70-100% hydrering         
 w400-440        :  80-100% hydrering         
 
+## recipes     
 
+### Vito Iacopelli - Pizza Dough Ready in 1 Hour             
+\------             
+125gr. Water,              
+125gr. Flour,              
+2.5gr.Yeast,              
+2.5gr. Honey.              
+Mix             
+Rest 18h             
+             
+50gr. Flour             
+ 5 gr. salt             
+2.5 dry yeast.              
+Mix             
+Roll ball             
+Rest 1 hour and Wala' your pizza dough is ready to use.              
  
  
-https://en.wikipedia.org/wiki/Template:Smoke_point_of_cooking_oils           
+ 
+### Enkel Tom Kah Gai
+\------            
+500 gram kyllingfilet            
+litt ingefær            
+1 stk rød chili (start forsiktig)            
+1 hermetisk boks kokosmelk (4 dl )            
+5 dl kyllingkraft / 1stk kyllingbuljong            
+1 Santa maria red curry paste (110g / 4 ss)            
+150 gram aromasopp            
+1 stk rødløk            
+3 ss asiatisk fiskesaus            
+2 stk lime / 4 ss sitron saft            
+1 ts sukker            
+5 stk vårløk / 4 vårløk / 1 løk            
+Koriander            
+Salt                           
+
+
+
+
 
