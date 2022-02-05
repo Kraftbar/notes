@@ -1,84 +1,5 @@
 # cooking-r
 
-Molasses          
-Pierogi 
-
-
-<br>
-
-## asian essentials 
-### sauce
-
-
-#### jp
-togarashi       
-
-### fruit 
-#### tried
-Durian      
-Jackfruit (South)    
-Longan/ Dragon eye    
-Lychee        
-Purple Mangosteen 山竹     
-Pitaya, or “Dragon Fruit” 火龙果           
-#### not tried
-Rambutan 红毛丹    
-Chinese Bayberry 杨梅     
-
-### vegetable
-bok choy (xiao you cai)      
-bitter melon         
-Preserved mustard cabbage  (/Ya cai /redroot gromwell?)       
-               
-
-### other
-rock sugar      
-
-Mungbean flour       
-millet flour       
-
-
-Alkaline Water      
-
-
-<br>
-
-## foods
-### chickbeans
-hummus   
-falaffel     
-
-## non edibles but essential
-Rubber bands      
-ikea clips      
-plastic bags/zip (1l / 3l)     
-flaxseed oil(/canola oil)       
-steamer basket         
-bambo sheet non stick      
-Steel / iron le creuset set       
-
-Wooden/steel spade      
-Wooden cutting board (37x37x4)cm      
-Oven steel/stone      
-Plastic wrapping      
-
-hand cake mixer /kitchen machine          
-
-## cooking rotation
-cili con carne       
-bolognese      
-carbonara      
-#### might need extra eq
-pizza     
-stir fry       
-
-
-## seafood    
-### fish
-spain       
-china       
- -black carp
- 
 ## pizza
 Caputo        
 \------     
@@ -150,6 +71,79 @@ Koriander
 Salt                           
 
 
+
+
+Molasses          
+Pierogi 
+
+
+<br>
+
+## asian essentials 
+### sauce
+
+
+#### jp
+togarashi       
+
+### fruit 
+#### tried
+Durian      
+Jackfruit (South)    
+Longan/ Dragon eye    
+Lychee        
+Purple Mangosteen      
+Pitaya, or “Dragon Fruit”            
+#### not tried
+Rambutan 红毛丹    
+Chinese Bayberry      
+
+### vegetable
+bok choy       
+bitter melon         
+Preserved mustard cabbage         
+               
+
+### other
+rock sugar      
+
+Mungbean flour       
+millet flour       
+
+
+Alkaline Water      
+
+
+<br>
+
+## foods
+### chickbeans
+hummus   
+falaffel     
+
+## non edibles but essential
+Rubber bands      
+ikea clips      
+plastic bags/zip (1l / 3l)     
+flaxseed oil(/canola oil)       
+steamer basket         
+bambo sheet non stick      
+Steel / iron le creuset set       
+
+Wooden/steel spade      
+Wooden cutting board (37x37x4)cm      
+Oven steel/stone      
+Plastic wrapping      
+
+hand cake mixer /kitchen machine          
+
+## cooking rotation
+cili con carne       
+bolognese      
+carbonara      
+#### might need extra eq
+pizza     
+stir fry       
 
 
 
