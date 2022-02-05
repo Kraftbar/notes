@@ -34,7 +34,7 @@ w360-400        :  70-100% hydrering
 w400-440        :  80-100% hydrering         
 
 ## recipes     
-
+Useful font when printing recipes - "Ink free"
 ### Vito Iacopelli - Pizza Dough Ready in 1 Hour             
 \------             
 125gr. Water,              
