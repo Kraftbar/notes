@@ -73,55 +73,12 @@ Salt
 
 
 
-Molasses          
-Pierogi 
-
 
 <br>
 
-## asian essentials 
-### sauce
+## obscure food items
 
-
-#### jp
-togarashi       
-
-### fruit 
-#### tried
-Durian      
-Jackfruit (South)    
-Longan/ Dragon eye    
-Lychee        
-Purple Mangosteen      
-Pitaya, or “Dragon Fruit”            
-#### not tried
-Rambutan     
-Bayberry      
-
-### vegetable
-bok choy       
-bitter melon         
-Preserved mustard cabbage         
-               
-
-### other
-rock sugar      
-
-Mungbean flour       
-millet flour       
-
-
-Alkaline Water      
-
-
-<br>
-
-## foods
-### chickbeans
-hummus   
-falaffel     
-
-## non edibles but essential
+## Kitchen accessories
 Rubber bands      
 ikea clips      
 plastic bags/zip (1l / 3l)     
@@ -137,7 +94,45 @@ Plastic wrapping
 
 hand cake mixer /kitchen machine          
 
-## cooking rotation
+
+#### jp
+togarashi       
+
+### fruit 
+Durian      
+Jackfruit (South)    
+Longan/ Dragon eye    
+Lychee        
+Purple Mangosteen      
+Pitaya, or “Dragon Fruit”            
+Rambutan     
+Bayberry      
+
+### vegetable
+bok choy       
+bitter melon         
+Preserved mustard cabbage         
+               
+
+### other
+rock sugar      
+
+Mungbean flour       
+millet flour       
+Alkaline Water      
+
+Molasses          
+Pierogi     
+
+
+<br>
+
+## foods
+### chickbeans
+hummus   
+falaffel     
+
+## Cooking rotation
 cili con carne       
 bolognese      
 carbonara      
