@@ -121,7 +121,40 @@ spain
 china       
  -black carp
  
- 
+## pizza
+Caputo        
+------     
+Caputo Pizzeria	    12.5% - W 260/270 - (meny/oda)          
+Caputo Nuvola       12,5% - W 260/280 - (oda)          
+Caputo Cuoco        13%   - W 300/320 - (meny)         
+Caputo Manitoba Oro 14,5% - W 370/390 - (oda)         
+         
+DALLARI         
+--------         
+DALLARI VERDE             - W 220     - (meny)         
+DALLARI BLU               - W 230     - (meny)         
+         
+Møllerens          
+-------         
+Møllerens Pizzamel        - (W 180-220?)         
+         
+Villa Paradiso         
+-------         
+Pizzamel          
+         
+         
+	         
+(Vann / Mel) x 100 = hydrering         
+         
+w160-200        :  55-60%  hydrering         
+w200-240        :  60-70%  hydrering         
+w240-280        :  60-75%  hydrering         
+w280-320        :  60-80%  hydrering         
+w320-360        :  65-80%  hydrering         
+w360-400        :  70-100% hydrering         
+w400-440        :  80-100% hydrering         
+
+
  
  
 https://en.wikipedia.org/wiki/Template:Smoke_point_of_cooking_oils           
