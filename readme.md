@@ -93,6 +93,18 @@ Plastic wrapping
 
 hand cake mixer /kitchen machine          
 
+<br>
+
+## oppbevaring, holdbarhet
+Salami 3 mnd             
+ost 1-3 mnd?             
+margarin -6 mnd             
+gullerot 1-3mnd             
+chreme fresh 2mnd             
+dijon 16mnd             
+hellmans majones 9md / 3mnd etter åpnet             
+
+
 
 <br>
 
