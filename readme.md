@@ -105,6 +105,11 @@ hand cake mixer /kitchen machine
 | chreme fresh     | 2mnd                   |
 | dijon            | 16mnd                  |
 | hellmans majones | 9md / 3mnd etter åpnet |
+| løk |  |
+| sylteagurk |  |
+| syltet paprika |  |
+|  |  |
+|  |  |
 
 
 <br>
