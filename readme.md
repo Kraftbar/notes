@@ -7,6 +7,8 @@ Caputo Pizzeria	    12.5% - W 260/270 - (meny/oda)
 Caputo Nuvola       12,5% - W 260/280 - (oda)          
 Caputo Cuoco        13%   - W 300/320 - (meny)         
 Caputo Manitoba Oro 14,5% - W 370/390 - (oda)         
+
+
          
 DALLARI         
 \--------         
@@ -95,7 +97,7 @@ hand cake mixer /kitchen machine
 
 <br>
 
-## oppbevaring, holdbarhet
+## oppbevaring, fridge essentials
 |            |                   |
 |------------------|------------------------|
 | Salami           | 3 mnd                  |
