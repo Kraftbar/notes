@@ -18,3 +18,8 @@ Linjeavstand
 
 lines	-	14pt is 37
 		12pt is 44
+
+
+Notepad	-	linjeskifte er samme som linjebryting som tanke på Linjeavstand	
+		Consolas 14p (default) er akkurat 42 linjer per side.
+		Consolas 12p er akkurat 49 linjer per side.
