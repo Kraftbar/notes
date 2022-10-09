@@ -1,5 +1,5 @@
 A4	-	210x297 mm
-p	-	DTP point is defined as 1⁄72 inch (0.353 mm)
+pt	-	DTP point is defined as 1⁄72 inch (0.353 mm)
 em	-	unit of whatever pt value as been set, also has a square box assosiated with it. 
 
 margin	-	Word 2007 onward have been 1 inch (25.4 mm) all around; 
