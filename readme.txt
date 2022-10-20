@@ -16,10 +16,10 @@ Linjeavstand
 	-	
 
 
-lines	-	11pt is ? lines,  73 rows
-		12pt is 44 lines, 66 rows
-		13pt is ? lines,  61 rows
-		14pt is 37 lines, 57 rows
+lines	-	11pt is ? lines,  73 columns
+		12pt is 44 lines, 66 columns
+		13pt is ? lines,  61 columns
+		14pt is 37 lines, 57 columns
 
 
 Notepad	-	linjeskifte er samme som linjebryting med tanke på Linjeavstand	
