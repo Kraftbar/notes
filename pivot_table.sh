@@ -9,9 +9,9 @@ declare -a facilities
 # Read the syslog file
 while read line; do
   # Extract the time and facility from each line
-  time=$(echo $line | awk '{print $2}')
+  time=$(echo $line | awk '{print $3}')
   facility=$(echo $line | awk -F "[][]" '{print $2}' | awk -F ":" '{print $1}')
-
+  echo $line | awk '{print $3}'
   # Add the facility to the array of facilities if it doesn't already exist
   if ! [[ " ${facilities[@]} " =~ " ${facility} " ]]; then
     facilities+=($facility)
@@ -23,7 +23,7 @@ while read line; do
   else
     facility_count[$time,$facility]=1
   fi
-done < /var/log/syslog
+done < syslog
 
 # Print the header
 echo "time,"$(echo "${facilities[@]}" | tr " " ",")
