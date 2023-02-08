@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Set the max depth for the search
+max_depth=3
+
+# Function to check if a directory is a Git repository
+is_git_repo() {
+  if [ -d "$1/.git" ]; then
+    return 0
+  else
+    return 1
+  fi
+}
+
+# Search for Git repositories
+for dir in $(find . -maxdepth $max_depth -type d); do
+  if is_git_repo "$dir"; then
+    echo "Found Git repository: $dir"
+    cd "$dir"
+
+    # Check the status of the repository
+    status=$(git status --porcelain)
+    if [ -n "$status" ]; then
+      echo "Repository has changes that haven't been committed."
+    else
+      echo "Repository is clean."
+    fi
+
+    # Check if the repository is behind the master branch
+    behind=$(git rev-list --left-right --count origin/master...HEAD 2>/dev/null | awk '{print $1}')
+    if [ -z "$behind" ]; then
+      echo "Unable to determine if the repository is behind the master branch."
+    elif [ "$behind" -gt 0 ]; then
+      echo "Repository is behind the master branch by $behind commits."
+    else
+      echo "Repository is up to date with the master branch."
+    fi
+
+    cd ..
+  fi
+done
