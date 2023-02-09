@@ -15,27 +15,34 @@ is_git_repo() {
 # Search for Git repositories
 for dir in $(find . -maxdepth $max_depth -type d); do
   if is_git_repo "$dir"; then
-    echo "Found Git repository: $dir"
     cd "$dir"
 
     # Check the status of the repository
     status=$(git status --porcelain)
-    if [ -n "$status" ]; then
-      echo "Repository has changes that haven't been committed."
-    else
-      echo "Repository is clean."
+    if [ ! -z "$status" ]; then
+      echo -e $dir "\t Repository has changes that haven't been committed."
     fi
 
-    # Check if the repository is behind the master branch
     behind=$(git rev-list --left-right --count origin/master...HEAD 2>/dev/null | awk '{print $1}')
     if [ -z "$behind" ]; then
-      echo "Unable to determine if the repository is behind the master branch."
-    elif [ "$behind" -gt 0 ]; then
-      echo "Repository is behind the master branch by $behind commits."
+      echo -e $dir "\t Unable to determine if the repository is behind the master branch."
+    elif [ "$(echo "$behind" | grep -E "^[0-9]+$")" ]; then
+      echo -e $dir "\t Repository is behind the master branch by $behind commits."
     else
-      echo "Repository is up to date with the master branch."
+      echo -e $dir "\t The number of commits behind the master branch is not an integer."
     fi
 
-    cd ..
+
+    # Check if the local repository is behind the remote repository
+    remote=$(git ls-remote --heads origin | grep refs/heads/master | cut -f1)
+    local=$(git rev-parse HEAD)
+    if [ "$local" = "$remote" ]; then
+      echo -e $dir " \t Local repository is up to date with the remote repository."
+    else
+      echo -e $dir " \t Local repository is behind the remote repository."
+    fi
+
+
+    cd ~/
   fi
 done
