@@ -11,3 +11,4 @@ iw dev wlp2s0 info | awk '/channel/ {print "Center " $9 }'
 
 test=$(curl -s http://wttr.in/oslo )
 echo "$test" | sed '13q;d' | grep -o "m\\([-+]\\)*[0-9]\\+" | sed 's/+//g' | sort -n -t 'm' -k 2n | sed -e 1b -e '$!d' |  tr '\n|m' ' '
+echo "$test" | sed '13q;d' | grep -oP '(?<=m)[-+]?[0-9]+' | sed 's/+//g' | sort -n -t 'm' -k 2n | sed -e 1b -e '$!d' |  tr '\n|m' ' '
