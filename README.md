@@ -14,6 +14,7 @@
 Vid learning
 	https://www.youtube.com/watch?v=PZxAkzpuxT8
 	https://tutorialsdojo.com/
+	acloudguru
 
 
 ChatGPT Prompts For Learning AWS
