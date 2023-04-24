@@ -1,4 +1,3 @@
-# aws-r
 
 
  ### Make sure to configure AWS
