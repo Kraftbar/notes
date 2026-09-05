@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage[a4paper,margin=1in,landscape]{geometry}
+\title{Testing av sagemath i tex}
+\date{2019   nov.}
+\author{nybo}
+\usepackage{sagetex}
+\usepackage{tikz,tkz-graph,tkz-berge}
+\thispagestyle{empty}
+\begin{document}
+\maketitle
+
+\begin{sagesilent}
+Soya = DiGraph()             # creates an empty graph
+Soya.add_vertex("Soybean")
+Soya.add_vertex("Tofu")
+Soya.add_vertex("Soy sauce")
+Soya.add_vertex("Ponzu")
+Soya.add_vertex("Teriyaki")
+Soya.add_vertex("Dark soyasouce")
+Soya.add_edge("Soybean","Soy sauce")
+Soya.add_edge("Soybean","Fermented soybean paste")
+Soya.add_edge("Fermented soybean paste","Doubanjiang")
+Soya.add_edge("Fermented soybean paste","Hoisin sauce")
+Soya.add_edge("Soybean","Soy milk")
+Soya.add_edge("Soy milk","Tofu")
+Soya.add_edge("Soy sauce","Ponzu")
+Soya.add_edge("Soy sauce","Teriyaki")
+Soya.add_edge("Soy sauce","Dark soyasouce")
+Soya.set_latex_options(scale=2.9)
+Soyap=Soya.plot()
+Soyap.save('Soya.eps')
+
+chili = DiGraph()             # creates an empty graph
+chili.add_vertex("Chili")
+chili.add_edge("Chili","Sambal")
+chili.add_edge("Chili","Dried chili")
+chili.add_edge("Chili","Smoked chili")
+chili.add_edge("Smoked chili","Chipotle sauce")
+chili.add_edge("Dried chili","Chili powder")
+chili.add_edge("Chili","Fermented chili")
+chili.add_edge("Fermented chili","Sriracha")
+chili.add_edge("Fermented chili","Hot Sauce")
+chili.set_latex_options(scale=2.5,edge_color='green')
+chilip=chili.plot()
+chilip.save('chili.eps')
+\end{sagesilent}
+\begin{center}
+\sage{Soya} 
+\end{center}
+\begin{center}
+\sage{chili} 
+\end{center}
+\end{document}
+
