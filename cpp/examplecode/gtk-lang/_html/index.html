@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+
+</head>
+
+<body>
+
+  <button onclick="focusFunction()">Focus m.</button>
+  <button onclick="changeLangFunction()">change lang</button>
+
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+</canvas>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<!-- script needs to load after canvas -->
+<label id="fileLabel" for="file">Select a file: </label>
+<input id="myFile" type="file" >
+<button id="prosFileButton" onclick="processFile()">Process</button>
+
+<br/>
+<br/>
+<label id="prosLabel" for="file">or pros text below </label>
+<button id="prosButton" onclick="processText()">Process</button><br/>
+
+<textarea id="myTextarea" name="message" rows="10" cols="60">
+我	wǒ	I, me
+我们	wǒmen	we, us (pl.)
+你	nǐ	you
+你们	nǐmen	you (pl.)
+他	tā	he, him
+她	tā	she, her
+</textarea>
+
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+
+
+    <div id="input_output">
+    <div id="output"> <b>read in text before begin</b></div>
+    <input id="typed_word" type="text"  name="lname" />       <br/>
+    <label id="feedback" for="typed_word">-</label>    
+  </div>
+  <br/>
+
+    <div id="buttons">
+        <span id="prev_button">Previous</span>
+        <span id="next_button">Next</span>
+        <span id="check_button">check</span>
+    </div>
+
+
+    <br/>
+    <br/>
+    <br/>
+
+
+
+
+
+</body>
+<script src="script.js"></script>  
+</html>
