@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Top 10 Most Viewed Games on Twitch</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>Top 10 Most Viewed Games on Twitch</h1>
+    <ul id="games-list"></ul>
+    <script>
+      // Define the API endpoint and query parameters
+      const endpoint = "https://api.twitch.tv/helix/games/top";
+      const queryParams = "?first=10";
+
+      // Set up the headers with your Twitch API Client ID
+      const headers = {
+        "Client-ID": "681osga22elzpmgfz09b0kr9rf5y9e",
+        "Authorization": "Bearer nxc5jrgwkruxctz12b3huijrsl6fl1"  
+      };
+
+      // Use fetch to get the data from the Twitch API
+      fetch(endpoint + queryParams, { headers })
+        .then(response => response.json())
+        .then(data => {
+          // Parse the response and populate the list
+          const gamesList = document.getElementById("games-list");
+          data.data.forEach(game => {
+            const gameListItem = document.createElement("li");
+            gameListItem.innerText = `${game.name} - ${game.viewer_count} viewers`;
+            gamesList.appendChild(gameListItem);
+          });
+        })
+        .catch(error => console.error(error));
+    </script>
+  </body>
+</html>
+
