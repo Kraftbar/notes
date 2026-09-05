@@ -1,3 +1,8 @@
+[ChatGPT, 2022-12-17 — asked 17 days after public launch]
+Prompt: kalman filter in C
+
+------------------------------------------------------------
+
 Here is an example of a Kalman filter implemented in C:
 
 Copy code

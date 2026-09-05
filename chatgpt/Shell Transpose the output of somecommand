@@ -1,3 +1,8 @@
+[ChatGPT, 2022-12-17 — asked 17 days after public launch]
+Prompt: Shell Transpose the output of somecommand
+
+------------------------------------------------------------
+
 # Transpose the output of somecommand using awk
 somecommand | awk '
 { 

@@ -1,3 +1,8 @@
+[ChatGPT, 2022-12-17 — asked 17 days after public launch]
+Prompt: asynchronous function in javascript that gets another website
+
+------------------------------------------------------------
+
 Here's an example of an asynchronous function in JavaScript that uses a callback function to perform an operation asynchronously:
 
 Copy code

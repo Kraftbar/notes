@@ -1,3 +1,8 @@
+[ChatGPT, 2022-12-17 — asked 17 days after public launch]
+Prompt: singular value decomposition function in C
+
+------------------------------------------------------------
+
 Singular value decomposition (SVD) is a matrix factorization technique that decomposes a matrix A into the product of three matrices: U, S, and V^T, where U and V are unitary matrices and S is a diagonal matrix with non-negative real numbers on the diagonal, called the singular values of A.
 
 Here is an example of a function that performs SVD in C:

@@ -1,3 +1,8 @@
+[ChatGPT, 2022-12-17 — asked 17 days after public launch]
+Prompt: singular value decomposition function in C #2
+
+------------------------------------------------------------
+
 Singular value decomposition (SVD) is a factorization of a real or complex matrix that generalizes the eigendecomposition of a square normal matrix to any m × n matrix via an extension of the polar decomposition. It has many useful applications in areas such as image and data compression, and is used to compute the low-rank approximation of a matrix.
 
 Here is an example of a function that computes the singular value decomposition of a matrix in C:

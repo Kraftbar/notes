@@ -1,3 +1,8 @@
+[ChatGPT, 2022-12-18 — asked 18 days after public launch]
+Prompt: good pointer practise in C
+
+------------------------------------------------------------
+
 int main()
 {
     // Declare a pointer to an int and initialize it to NULL

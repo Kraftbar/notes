@@ -1,3 +1,8 @@
+[ChatGPT, 2022-12-18 — asked 18 days after public launch]
+Prompt: simple p2p wan system in C
+
+------------------------------------------------------------
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

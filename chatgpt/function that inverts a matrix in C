@@ -1,3 +1,8 @@
+[ChatGPT, 2022-12-17 — asked 17 days after public launch]
+Prompt: function that inverts a matrix in C
+
+------------------------------------------------------------
+
 Here is an example of a function that computes the inverse of a matrix in C:
 
 Copy code

@@ -19,7 +19,8 @@ Reference notes and scratch code, consolidated from 19 former `*-r` repositories
 
 - `ideas.md` — project backlog, from the former `active-proj` repo.
 - `networking/` — router and OpenWrt config notes, from `GL-AR750S-Ext`.
-- `chatgpt/` — saved answers, from `chat.openai-answers`.
+- `chatgpt/` — answers saved from ChatGPT on 17–18 December 2022, ~2.5 weeks
+  after it launched. Kept as a period piece; each file stamped with its date.
 - `shell/covid-bash.sh`, `shell/norske-tekster-count.sh` — from `covid-bash` and
   `Norske-tekster-med-enkel-formatering`.
 - `python/count-char.py`, `python/norske-tekster-format.py`,
