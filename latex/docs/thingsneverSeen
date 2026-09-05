@@ -1,0 +1,8 @@
+\fbox{} - box around equation
+\begin{flalign}---\end{flalign} - make weird equations
+
+hvorfor funker
+
+\begin{align}
+C_{A}\left(\nu_{r}\right)  &&& C_{R B}(\nu) && D\left(\nu_{r}\right)  & g(\eta)
+\end{align}

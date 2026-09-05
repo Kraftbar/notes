@@ -1,0 +1,28 @@
+\documentclass[border=5mm]{standalone}
+
+\usepackage{tikz,pgfplots}
+
+
+\begin{document}
+
+\centering
+\begin{tikzpicture}
+    \begin{axis} [width=21cm, height=14cm,
+    tick label style={font=\large},
+    xmin=7700, xmax=7810,
+    xtick={7700,7725,...,7800},
+    axis x line=box,
+    axis y line=box
+    ]
+    \addplot gnuplot [raw gnuplot, id=test, mark=none]{
+    set xrange [7700:7810];
+    set yrange [0:0.05];
+    plot "test.txt" using ($1):($2) every 1:1:100500::105000 with lines;
+    };
+
+    \end{axis}
+\end{tikzpicture}
+
+
+
+\end{document}
