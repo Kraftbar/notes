@@ -1,0 +1,399 @@
+% Created 2019-12-16 Mon 12:41
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\usepackage[margin=3cm]{geometry} 	   % Choose your margin here.
+\usepackage{tikz,pgfplots}
+\usetikzlibrary{calc,patterns,arrows,decorations.pathmorphing,decorations.markings}
+\usepackage{array,makecell,multirow}
+\pgfplotsset{width=16cm,height=6cm, compat=1.8}
+\usepackage{amsmath,mathtools,amssymb,mathrsfs}
+\usepackage{cancel}
+\setcounter{secnumdepth}{1}
+\author{nybo}
+\date{\today}
+\title{readme}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 25.2.2 (Org mode 8.2.10)}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+Personal note to help me remember 
+
+\section{Norms}
+\label{sec-1}
+\subsection*{def}
+\label{sec-1-1}
+\begin{enumerate}
+\item Positivity  $\|x\| \geq 0$
+\item Positive definiteness $\|x\|=0 \Longleftrightarrow x=0$
+\item Homogeneity $\|\alpha x\|=|\alpha|\|x\|$ for arbitrary scalar $\alpha$
+\item Triangle inequality $\|x+y\| \leq\|x\|+\|y\|$
+\end{enumerate}
+Note: not sure if this holds for ever norm
+\subsection*{The different matrix ones (Norms on $A \in \mathbb{R}^{m \times n}$)}
+\label{sec-1-2}
+$$
+\|A\|_{1}=\max _{1 \leq j \leq n} \sum_{i=1}^{m}\left|a_{i j}\right|
+$$
+
+$$
+\|A\|_{2}=\sqrt{\lambda_{\max }\left(A^{T} A\right)}
+$$
+
+Frobenius norm, sometimes also called the Euclidean norm
+
+$$
+\|\mathrm{A}\|_{F} \equiv \sqrt{\sum_{i=1}^{m} \sum_{j=1}^{n}\left|a_{i j}\right|^{2}}
+$$
+
+$$
+\|A\|_{\infty}=\max _{1 \leq i \leq m} \sum_{j=1}^{n}\left|a_{i j}\right|
+$$
+\subsection*{Vector norms (Norms on $\mathbb{R}^{n}$)}
+\label{sec-1-3}
+
+$$|\mathbf{x}|_{p} \equiv\left(\sum_{i}\left|x_{i}\right|^{p}\right)^{1 / p}$$
+
+special case:
+
+$$|\mathbf{x}|_{\infty} \equiv \max _{i}\left|x_{i}\right|$$
+
+
+
+Tips: pretty sure think $\|\cdot\|$ usually just refers to the 2-norm.
+
+
+\subsection*{Scalar norm (Norm on $C[a, b]$)}
+\label{sec-1-4}
+
+\begin{equation}
+\left.\begin{array}{l}
+{\|f\|_{p}=\left(\int_{a}^{b}|f(\tau)|^{p} d \tau\right)^{\frac{1}{p}}, \quad p \in[1, \infty]} \\ 
+{\|f\|_{\infty}=\displaystyle\sup _{\scriptscriptstyle a \leq t \leq b}|f(t)| }\end{array} \quad,
+\right\} \quad \mathscr{L}_{p}-\text { norms }
+\end{equation}
+
+$$
+C[0, \infty), \mathscr{L}_{p} \text{ is a Banach space}
+$$
+
+$f \in \mathscr{L}_{p} \Leftrightarrow\|f\|_{p}$ is bounded, i.e. $\exists c:\|f\|_{p} \leq c$
+\section{Tensor rank}
+\label{sec-2}
+\begin{table}[h]
+\begin{tabular}{cl}
+rank                & object   \\
+\hline
+0                   & scalar   \\
+1                   & vector  \\
+2                   & matrix (/Dyad)  \\
+$\geq 3$ & tensor        
+\end{tabular}
+\end{table}
+Also sometimes  triad, tetrad are used to refer to tensors of 
+rank 3 and 4 respectivly. Some refer to the rank of a tensor as
+its order or its degree.
+
+
+
+
+\section{SVD}
+\label{sec-3}
+Example: 
+$A=\left[\begin{array}{lll}{0} & {1} & {1} \\ {\sqrt{2}} & {2} & {0} \\ {0} & {1} & {1}\end{array}\right]$
+
+The SVD is defined as
+$$
+A=P \Sigma Q^{T}
+$$
+
+\subsection*{Method}
+\label{sec-3-1}
+Computing:
+$$
+A A^{T}=\left[\begin{array}{lll}{2} & {2} & {2} \\ {2} & {6} & {2} \\ {2} & {2} & {2}\end{array}\right]
+$$
+
+\begin{equation}
+\begin{aligned}
+-\lambda^{3}+10 \lambda^{2}-16 \lambda &=-\lambda\left(\lambda^{2}-10 \lambda+16\right) \\
+ &=-\lambda(\lambda-8)(\lambda-2) 
+\end{aligned}
+\end{equation}
+
+
+Eigenvals of $A A^{T}$ are $\lambda=8, \lambda=2, \lambda=0$, thus the singular values
+ are $\sigma_{1}=2 \sqrt{2}, \sigma_{2}=\sqrt{2}\left(\text { and } \sigma_{3}=0\right)$.
+
+
+Giving out the matrix
+$$
+\Sigma= 0_{3x3}+\sigma=
+\left[\begin{array}{ccc}{2 \sqrt{2}} & {0} & {0} \\ {0} & {\sqrt{2}} & {0} \\ {0} & {0} & {0}\end{array}\right]
+$$
+
+
+Finding the eigenvectors $(A-\lambda I) \mathbf{x}=\mathbf{0}$, we get respetivly to the egienvector
+ who is described before: $p_{1}=\left(\frac{1}{\sqrt{6}}, \frac{2}{\sqrt{6}}, \frac{1}{\sqrt{6}}\right)$,
+ $p_{2}=\left(-\frac{1}{\sqrt{3}}, \frac{1}{\sqrt{3}},-\frac{1}{\sqrt{3}}\right)$ and 
+$p_{3}=\left(\frac{1}{\sqrt{2}}, 0,-\frac{1}{\sqrt{2}}\right)$ (note: normalised vectors).
+
+Yeilding
+
+$$
+P= \left[  {p_1}^T {p_2}^T {p_3}^T     \right]
+=\left[\begin{array}{ccc}{\frac{1}{\sqrt{6}}} & {-\frac{1}{\sqrt{3}}} & {\frac{1}{\sqrt{2}}} \\ {\frac{2}{\sqrt{6}}} & {\frac{1}{\sqrt{3}}} & {0} \\ {\frac{1}{\sqrt{6}}} & {-\frac{1}{\sqrt{3}}} & {-\frac{1}{\sqrt{2}}}\end{array}\right]
+$$
+
+
+
+
+$$
+A^{T} A=\left[\begin{array}{ccc}{2} & {2 \sqrt{2}} & {0} \\ {2 \sqrt{2}} & {6} & {2} \\ {0} & {2} & {2}\end{array}\right]
+$$
+With the eigenvals $\lambda=8, \lambda=2, \lambda=0$ with eigenvectors
+$q_{1}=\left(\frac{1}{\sqrt{6}}, \frac{3}{\sqrt{12}}, \frac{1}{\sqrt{12}}\right), q_{2}=\left(\frac{1}{\sqrt{3}}, 0,-\frac{2}{\sqrt{6}}\right) \text { and } q_{3}=\left(\frac{1}{\sqrt{2}},-\frac{1}{2}, \frac{1}{2}\right)$. (Acually
+ can also use the the formula $p_{i}=\frac{1}{\sigma_{i}} A^{T} p_{i}$ to get the various $q_i$.
+
+
+$$
+Q=\left[  {q_1}^T {q_2}^T {q_3}^T     \right]
+\left[\begin{array}{ccc}{\frac{1}{\sqrt{6}}} & {\frac{1}{\sqrt{3}}} & {\frac{1}{\sqrt{2}}} \\ {\frac{3}{\sqrt{12}}} & {0} & {-\frac{1}{2}} \\ {\frac{1}{\sqrt{12}}} & {-\frac{2}{\sqrt{6}}} & {\frac{1}{2}}\end{array}\right]
+$$
+
+
+We have then the SVD defined as
+$$
+A=P \Sigma Q^{T}
+$$
+
+\section{Covar}
+\label{sec-4}
+
+
+\newpage
+
+\section{change of basis}
+\label{sec-5}
+\subsection*{eigenvalue  decomposition}
+\label{sec-5-1}
+$$
+A=\left[\begin{array}{lll}{4} & {0} & {1} \\ {2} & {3} & {2} \\ {1} & {0} & {4}\end{array}\right]
+$$
+\begin{align*}
+\lambda&=5 \quad \operatorname{NUL}(A-5 I) =\text { SPAN }\left\{\left[\begin{array}{l}{1} \\ {2} \\ {1}\end{array}\right]\right\} \\
+\lambda&=3 \quad \operatorname{NUL}(A-3 I) = \text { SPAN }\left\{\left[\begin{array}{l}{0} \\ {1} \\ {0}\end{array}\right],\left[\begin{array}{c}{-1} \\ {0} \\ {1}\end{array}\right]\right\}
+\end{align*}
+$$
+D=\left[\begin{array}{lll}{5} & {0} & {0} \\ {0} & {3} & {0} \\ {0} & {0} & {3}\end{array}\right]
+P=\left[\begin{array}{llc}{1} & {0} & {-1} \\ {2} & {1} & {0} \\ {1} & {0} & {1}\end{array}\right]
+$$
+OK, good
+$$
+A=P D P^{-1}
+$$
+\subsection*{jordan}
+\label{sec-5-2}
+$$
+A=\left[\begin{array}{lll}{1} & {1} & {1} \\ {0} & {1} & {0} \\ {0} & {0} & {1}\end{array}\right]
+$$
+
+\begin{align*}
+\lambda&=1 \quad \operatorname{NUL}(A-1 I) = \text { SPAN }\left\{\left[\begin{array}{l}{1} \\ {0} \\ {0}\end{array}\right],\left[\begin{array}{c}{0} \\ {1} \\ {-1}\end{array}\right]\right\}
+\end{align*}
+2 eigenvectors? :-d    (for some reason we are calling these vectors the first and third)
+
+$$
+\left[\begin{array}{lll}
+{\lambda} & {1} & ?\\ 
+{0} & {\lambda}&  ?\\ 
+{0} & {0} &? 
+\end{array}\right]
+$$
+
+\begin{align*}
+A V_{1}&=\lambda V_{1} \\
+ A V_{2}&=V_{1}+\lambda V_{2}
+\end{align*}
+
+\begin{equation*}
+\begin{array}{l}{A V_{2}-\lambda V_{2}=V_{1}} \\ {(A-\lambda I) V_{2}=V_{1}}\end{array}
+\end{equation*}
+$V_1$ is given what is $V_2$? let $V_1=[1,0,0]^T$
+\begin{align*}
+(A-1 I) V_{2}&=V_{1}\\
+\left[\begin{array}{lll}{0} & {1} & {1} \\ {0} & {0} & {0} \\ {0} & {0} & {0}\end{array}\right] V_{2}&=\left[\begin{array}{l}{1} \\ {0} \\ {0}\end{array}\right]
+\end{align*}
+
+\begin{equation}
+V_{2}=\left[\begin{array}{l}{0} \\ {0} \\ {1}\end{array}\right]+\bcancel{x\left[\begin{array}{l}{1} \\ {0} \\ {0}\end{array}\right]+y\left[\begin{array}{c}{0} \\ {1} \\ {-1}\end{array}\right]}
+\end{equation}
+Let 
+\begin{equation}
+V_{2}=\left[\begin{array}{l}{0} \\ {0} \\ {1}\end{array}\right]
+\end{equation}
+
+\begin{equation}
+V_{3}=\left[\begin{array}{c}{0} \\ {1} \\ {-1}\end{array}\right]
+\end{equation}
+
+\begin{equation}
+A \quad \text { has the from }\left[\begin{array}{lll}1  &  1 &0 \\  0  &  1 &0 \\  0  &  0 &1\end{array}\right]
+\end{equation}
+
+\begin{equation}
+P=\left[\begin{array}{lll}{V_{1}} & {V_{2}} & {V_{3}}\end{array}\right]=
+ \left[\begin{array}{ccc}{1} & {0} & {0} \\ {0} & {0} & {1} \\ {0} & {1} & {-1}\end{array}\right]
+\end{equation}
+then
+\begin{equation}
+A=P J P^{-1} \quad J=\begin{equation}
+\left[\begin{array}{lll}{1} & {1} & {0} \\ {0} & {1} & {0} \\ {0} & {0} & {1}\end{array}\right]
+\end{equation}
+\end{equation}
+
+
+
+\section{linear def}
+\label{sec-6}
+
+\section{positive definite}
+\label{sec-7}
+A square matrix A is positive definite if there is a positive scalar α such that
+\begin{equation}
+x^{T} A x \geq \alpha x^{T} x, \quad \text { for all } x \in \mathbf{R}^{n}
+\end{equation}
+It is positive semidefinite if
+\begin{equation}
+x^{T} A x \geq 0, \quad \text { for all } x \in \mathbb{R}^{n}
+\end{equation}
+We can recognize that a symmetric matrix is positive definite by computing its eigenvalues
+and verifying that they are all positive, or by performing a Cholesky factorization. 
+
+
+
+\section{rotation things}
+\label{sec-8}
+
+
+3D point as 3-vector
+$$
+\mathbf{X}=\left[\begin{array}{l}{X} \\ {Y} \\ {Z}\end{array}\right]
+$$
+
+3D point using affine homogeneous
+$$
+\left[\begin{array}{l}{\mathbf{X}} \\ {1}\end{array}\right]=\left[\begin{array}{l}{X} \\ {Y} \\ {Z} \\ {1}\end{array}\right]
+$$
+Inverse of rotation matrix
+\begin{equation}
+\begin{aligned} \mathrm{X}^{\prime} &=\mathrm{RX}+\mathrm{t} \\
+ \mathrm{X}^{\prime}-\mathrm{t} &=\mathrm{RX} \\ 
+\mathrm{R}^{\top}\left(\mathrm{X}^{\prime}-\mathrm{t}\right) &=\mathrm{X} \\
+ \mathrm{R}^{\top} \mathrm{X}^{\prime}-\mathrm{R}^{\top} \mathrm{t} &=\mathrm{X} 
+\end{aligned}
+\end{equation}
+This gives in homogenius
+
+$$
+\left[\begin{array}{cc}{\mathrm{R}^{\top}} & {-\mathrm{R}^{\top} \mathbf{t}} \\ {0^{\top}} & {1}\end{array}\right]\left[\begin{array}{l}{\mathrm{X}^{\prime}} \\ {1}\end{array}\right]=\left[\begin{array}{l}{\mathrm{X}} \\ {1}\end{array}\right]
+$$
+\subsection*{Rodrigues rotation}
+\label{sec-8-1}
+rotation matrix in vector form
+\begin{equation} 
+\begin{array}{l} \theta \leftarrow norm(r) \\ r  \leftarrow r/ \theta \\ R =  \cos{\theta} I + (1- \cos{\theta} ) r r^T +  \sin{\theta}\left[\begin{array}{ccc}{0} & {-r_{z}} & {r_{y}} \\ {r_{z}} & {0} & {-r_{x}} \\ {-r_{y}} & {r_{x}} & {0}\end{array}\right] \end{array}
+\end{equation}
+
+Inverse transformation can be also done easily, since
+
+
+
+
+\begin{equation}
+ \sin{\theta}\left[\begin{array}{ccc}{0} & {-r_{z}} & {r_{y}} \\ {r_{z}} & {0} & {-r_{x}} \\ {-r_{y}} & {r_{x}} & {0}\end{array}\right]= \frac{R - R^T}{2}
+\end{equation}
+
+A rotation vector is a convenient and most compact representation of a rotation matrix (since any rotation matrix has just 3 degrees of freedom)
+
+\newpage
+\section{Logic}
+\label{sec-9}
+\subsection*{Necessity and sufficiency}
+\label{sec-9-1}
+\begin{equation*}
+\begin{array}{|c|c|c|c|c|}\hline S & {N} & {S \Rightarrow N} & {S \Leftarrow N} & {S \Leftrightarrow N} \\ \hline T & {T} & {T} & {T} & {T} \\ \hline T & {F} & {F} & {T} & {F} \\ \hline F & {T} & {T} & {F} & {F} \\ \hline F & {F} & {T} & {T} & {T} \\ \hline\end{array}
+\end{equation*}
+
+\begin{center}
+\begin{tikzpicture}
+\def\radius{2cm}
+\def\mycolorbox#1{\textcolor{#1}{\rule{2ex}{2ex}}}
+\colorlet{colori}{blue!70}
+\colorlet{colorii}{red!70}
+
+\coordinate (ceni);
+\coordinate[xshift=\radius] (cenii);
+
+\draw[fill=colori,fill opacity=0.5] (ceni) circle (\radius);
+\draw[fill=colorii,fill opacity=0.5] (cenii) circle (\radius);
+
+\draw  ([xshift=-20pt,yshift=20pt]current bounding box.north west) 
+  rectangle ([xshift=20pt,yshift=-20pt]current bounding box.south east);
+
+\node[yshift=10pt] at (current bounding box.north) {Venn diagram };
+\node[xshift=-.5\radius] at (ceni) {$\mathbf{S}$};
+\node[xshift=.5\radius] at (cenii) {$\mathbf{N}$};
+\node[xshift=.9\radius] at (ceni) {$\mathbf{S}\cap\mathbf{N}}$};
+\node[xshift=10pt,yshift=10pt] at (current bounding box.south west) {$\emptyset$};
+\end{tikzpicture}
+\end{center}
+
+\subsection*{Classification: True vs. False and Positive vs. Negative}
+\label{sec-9-2}
+
+\subsubsection*{Confusion matrix}
+\label{sec-9-2-1}
+Example       based off   one story from   Aesop's Fables:
+\begin{table}[h!]
+\begin{tabular}{|l|l|}
+\hline
+\makecell[l]{\textbf{True Positive (TP):}\\
+Reality: A wolf threatened. \\
+Shepherd said: "Wolf." \\
+Outcome: Shepherd is a hero.   }         & 
+\makecell[l]{\textbf{False Positive (FP):}\\
+Reality: No wolf threatened. \\
+Shepherd said: "Wolf." \\
+Outcome: Villagers are \\ angry at shepherd for waking them up.}          \\ \hline
+\makecell[l]{\textbf{False Negative (FN):}\\
+Reality: A wolf threatened. \\
+Shepherd said: "No wolf." \\
+Outcome: The wolf ate all the sheep.}          & 
+\makecell[l]{\textbf{True Negative (TN):}\\
+Reality: No wolf threatened. \\
+Shepherd said: "No wolf." \\
+Outcome: Everyone is fine.  }                              \\ \hline
+\end{tabular}
+\end{table}
+% Emacs 25.2.2 (Org mode 8.2.10)
+\end{document}
