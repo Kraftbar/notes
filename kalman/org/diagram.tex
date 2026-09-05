@@ -1,0 +1,30 @@
+
+\begin{tikzpicture}[%
+  font=\scriptsize  ,
+  >=stealth,
+  every node/.style={rounded corners},
+  Blue/.style={
+    draw=none, text opacity=1, fill=blue!40!black, fill opacity=0.6
+  },
+  declare function={
+    normalpdf(\x,\mu,\sigma)=
+    (2*3.1415*\sigma^2)^(-0.5)*exp(-(\x-\mu)^2/(2*\sigma^2));
+  }]
+
+  \begin{axis}[myplot, hide axis]
+    \addplot[Blue, draw, smooth, thick, domain=0:25]
+    {normalpdf(x,3,0.5)};
+    \node  at (30,-60) {$\mathcal{N}\left(\hat{x}_{k-1}, \hat{P}_{k-1}\right) $};
+    \addplot[Blue, draw, smooth, thick, domain=0:25]
+    {normalpdf(x,12,1)};
+    \node  at (120,-60) {$ \mathcal{N}\left(\check{x}_{k}, \check{P}_{k}\right) $};
+    \addplot[Blue, draw, smooth, thick, domain=0:25] 
+    {normalpdf(x,18,0.55)} ;
+    \node  at (180,-60) {$  \mathcal{N}\left(\hat{x}_{k}, \hat{P}_{k}\right) $};
+    \addplot[Blue, draw, smooth, thick, domain=0:26]
+    {normalpdf(x,22,0.7)} ;
+    \node  at (223,-60) {$\mathcal{N}\left(y_{k}, R_{k}\right)$};
+
+    \draw[->, smooth, thick] (0,0) -- (270,0) node[below] {$x$};
+  \end{axis}
+\end{tikzpicture}%
