@@ -1,0 +1,59 @@
+Singular value decomposition (SVD) is a matrix factorization technique that decomposes a matrix A into the product of three matrices: U, S, and V^T, where U and V are unitary matrices and S is a diagonal matrix with non-negative real numbers on the diagonal, called the singular values of A.
+
+Here is an example of a function that performs SVD in C:
+
+Copy code
+#include <stdio.h>
+#include <math.h>
+#include <gsl/gsl_matrix.h>
+#include <gsl/gsl_vector.h>
+#include <gsl/gsl_linalg.h>
+
+#define N 3
+
+void svd(gsl_matrix *A, gsl_matrix *U, gsl_matrix *S, gsl_matrix *V)
+{
+    gsl_vector *sigma = gsl_vector_alloc(N);
+    gsl_linalg_SV_decomp(A, V, sigma, U);
+    gsl_matrix_set_zero(S);
+    for (int i = 0; i < N; i++) {
+        gsl_matrix_set(S, i, i, gsl_vector_get(sigma, i));
+    }
+    gsl_vector_free(sigma);
+}
+
+int main(void)
+{
+    gsl_matrix *A = gsl_matrix_alloc(N, N);
+    gsl_matrix *U = gsl_matrix_alloc(N, N);
+    gsl_matrix *S = gsl_matrix_alloc(N, N);
+    gsl_matrix *V = gsl_matrix_alloc(N, N);
+
+    // Initialize matrix A
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            gsl_matrix_set(A, i, j, 1.0 / (i + j + 1));
+        }
+    }
+
+    svd(A, U, S, V);
+
+    printf("U = \n");
+    gsl_matrix_fprintf(stdout, U, "%g");
+    printf("\n");
+
+    printf("S = \n");
+    gsl_matrix_fprintf(stdout, S, "%g");
+    printf("\n");
+
+    printf("V = \n");
+    gsl_matrix_fprintf(stdout, V, "%g");
+    printf("\n");
+
+    gsl_matrix_free(A);
+    gsl_matrix_free(U);
+    gsl_matrix_free(S);
+    gsl_matrix_free(V);
+
+    return 0;
+}

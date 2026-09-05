@@ -18,6 +18,13 @@ Reference notes and scratch code, consolidated from 19 former `*-r` repositories
 ## Loose files
 
 - `ideas.md` — project backlog, from the former `active-proj` repo.
+- `networking/` — router and OpenWrt config notes, from `GL-AR750S-Ext`.
+- `chatgpt/` — saved answers, from `chat.openai-answers`.
+- `shell/covid-bash.sh`, `shell/norske-tekster-count.sh` — from `covid-bash` and
+  `Norske-tekster-med-enkel-formatering`.
+- `python/count-char.py`, `python/norske-tekster-format.py`,
+  `python/paintings-getlinks.py` — from `count-char`, the Norske-tekster repo
+  and `paintings`.
 
 ## History
 

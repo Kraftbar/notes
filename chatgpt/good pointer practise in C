@@ -1,0 +1,32 @@
+int main()
+{
+    // Declare a pointer to an int and initialize it to NULL
+    int* ptr = NULL;
+
+    // Allocate memory for an int using malloc and store the address in the pointer
+    ptr = (int*) malloc(sizeof(int));
+    if (ptr == NULL) {
+        // malloc failed, handle the error
+        fprintf(stderr, "Error: Could not allocate memory\n");
+        return 1;
+    }
+
+    // Use the pointer to store a value
+    *ptr = 42;
+    printf("Value stored at address %p: %d\n", ptr, *ptr);
+
+    // When you are done using the memory, free it using free
+    free(ptr);
+    ptr = NULL;
+
+    return 0;
+}
+
+This program declares a pointer to an int and initializes it to NULL. It then uses the malloc function to allocate memory for an int and stores the address of the allocated memory in the pointer. The program checks the return value of malloc to ensure that it was successful before using the pointer.
+
+The program then uses the pointer to store a value and prints it out using the dereference operator (*). When the program is finished using the memory, it calls the free function to release it, and sets the pointer to NULL to prevent it from being used again.
+
+This program demonstrates good practices such as initializing pointers to NULL, checking the return value of memory allocation functions, and freeing memory when it is no longer needed. Following these practices can help prevent common problems such as null pointer dereferences and memory leaks.
+
+
+

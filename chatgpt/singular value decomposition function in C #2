@@ -1,0 +1,67 @@
+Singular value decomposition (SVD) is a factorization of a real or complex matrix that generalizes the eigendecomposition of a square normal matrix to any m × n matrix via an extension of the polar decomposition. It has many useful applications in areas such as image and data compression, and is used to compute the low-rank approximation of a matrix.
+
+Here is an example of a function that computes the singular value decomposition of a matrix in C:
+
+Copy code
+#include <stdio.h>
+#include <math.h>
+#include <lapacke.h>
+
+#define M 3
+#define N 4
+
+void svd(double A[M][N], double U[M][M], double S[M], double V[N][N])
+{
+    lapack_int info, m, n, lda, ldu, ldvt;
+    double superb[M-1];
+
+    m = M;
+    n = N;
+    lda = M;
+    ldu = M;
+    ldvt = N;
+
+    info = LAPACKE_dgesvd(LAPACK_COL_MAJOR, 'A', 'A', m, n,
+                         (double*)A, lda, S, (double*)U, ldu,
+                         (double*)V, ldvt, superb);
+
+    if (info > 0) {
+        printf("The algorithm computing SVD failed to converge.\n");
+        exit(1);
+    }
+}
+
+int main(void)
+{
+    double A[M][N] = { {1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12} };
+    double U[M][M];
+    double S[M];
+    double V[N][N];
+
+    svd(A, U, S, V);
+
+    printf("Singular values:\n");
+    for (int i = 0; i < M; i++) {
+        printf("%.2f ", S[i]);
+    }
+    printf("\n");
+
+    printf("Left singular vectors:\n");
+    for (int i = 0; i < M; i++) {
+        for (int j = 0; j < M; j++) {
+            printf("%.2f ", U[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("Right singular vectors:\n");
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            printf("%.2f ", V[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+This function takes in a matrix A and three matrices U, S, and V, and computes the singular value decomposition of A as A = U * S * V^T. The singular values are stored in the vector S, and the left and right singular vectors are stored in the matrices U and V, respectively.

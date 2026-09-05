@@ -1,0 +1,74 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+
+#define PORT 12345  // Port number for the P2P connection
+#define BUFSIZE 1024  // Buffer size for incoming messages
+
+int main(int argc, char *argv[]) {
+  int sockfd;  // Socket descriptor for the P2P connection
+  struct sockaddr_in addr;  // Address structure for the P2P connection
+  char buffer[BUFSIZE];  // Buffer for incoming messages
+
+  // Create a socket for the P2P connection
+  sockfd = socket(AF_INET, SOCK_STREAM, 0);
+  if (sockfd < 0) {
+    perror("Error creating socket");
+    return 1;
+  }
+
+  // Set up the address structure for the P2P connection
+  memset(&addr, 0, sizeof(addr));
+  addr.sin_family = AF_INET;
+  addr.sin_addr.s_addr = INADDR_ANY;
+  addr.sin_port = htons(PORT);
+
+  // Bind the socket to the address
+  if (bind(sockfd, (struct sockaddr *)&addr, sizeof(addr)) < 0) {
+    perror("Error binding socket");
+    return 1;
+  }
+
+  // Listen for incoming connections
+  if (listen(sockfd, 1) < 0) {
+    perror("Error listening for connections");
+    return 1;
+  }
+
+  // Accept an incoming connection
+  int peerfd;  // Socket descriptor for the incoming connection
+  struct sockaddr_in peer_addr;  // Address structure for the incoming connection
+  socklen_t peer_addr_len = sizeof(peer_addr);
+  peerfd = accept(sockfd, (struct sockaddr *)&peer_addr, &peer_addr_len);
+  if (peerfd < 0) {
+    perror("Error accepting connection");
+    return 1;
+  }
+
+  // Read a message from the incoming connection
+  int num_bytes;  // Number of bytes received
+  num_bytes = read(peerfd, buffer, BUFSIZE);
+  if (num_bytes < 0) {
+    perror("Error reading from connection");
+    return 1;
+  }
+  printf("Received message: %s\n", buffer);
+
+  // Write a message to the incoming connection
+  const char *message = "Hello from the other device!";
+  num_bytes = write(peerfd, message, strlen(message));
+  if (num_bytes < 0) {
+    perror("Error writing to connection");
+    return 1;
+  }
+
+  // Close the sockets
+  close(peerfd);
+  close(sockfd);
+
+  return 0;
+}

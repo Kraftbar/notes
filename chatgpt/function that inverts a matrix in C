@@ -1,0 +1,65 @@
+Here is an example of a function that computes the inverse of a matrix in C:
+
+Copy code
+#include <stdio.h>
+#include <math.h>
+#include <lapacke.h>
+
+#define N 3
+
+void inverse(double A[N][N], double Ainv[N][N])
+{
+    lapack_int info, n, lda, ldinv;
+    int ipiv[N];
+
+    n = N;
+    lda = N;
+    ldinv = N;
+
+    info = LAPACKE_dgetrf(LAPACK_COL_MAJOR, n, n, (double*)A, lda, ipiv);
+
+    if (info > 0) {
+        printf("The matrix is singular and cannot be inverted.\n");
+        exit(1);
+    }
+
+    info = LAPACKE_dgetri(LAPACK_COL_MAJOR, n, (double*)A, lda, ipiv);
+
+    if (info > 0) {
+        printf("The inverse could not be computed.\n");
+        exit(1);
+    }
+
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            Ainv[i][j] = A[i][j];
+        }
+    }
+}
+
+int main(void)
+{
+    double A[N][N] = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
+    double Ainv[N][N];
+
+    inverse(A, Ainv);
+
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            printf("%.2f ", Ainv[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+This function takes in a matrix A and another matrix Ainv, and computes the inverse of A as Ainv = A^-1. It does this by using the LAPACKE library, which provides a C interface to the LAPACK library for solving linear algebra problems.
+
+The LAPACKE_dgetrf function is used to compute the LU factorization of the matrix A, and the LAPACKE_dgetri function is used to compute the inverse of A from the LU factorization. The inverse is then stored in the matrix Ainv.
+
+The size of the matrix is defined by the constant N. In this example, the matrix A is assumed to be a square matrix of size N x N.
+
+You can modify this function to work with matrices of different sizes or to perform other operations, such as matrix inversion using other methods such as the Gauss-Jordan method.
+
+
+
