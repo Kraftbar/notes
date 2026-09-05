@@ -1,0 +1,6 @@
+
+# compiled artifacts
+*.o
+*.exe
+*.bin
+a.out
