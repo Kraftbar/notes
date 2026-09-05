@@ -15,6 +15,10 @@ Reference notes and scratch code, consolidated from 19 former `*-r` repositories
 | `kalman` | `kalman-r` | `WSL` | `WSL-r` |
 | `latex` | `latex-r` | | |
 
+## Loose files
+
+- `ideas.md` — project backlog, from the former `active-proj` repo.
+
 ## History
 
 All original commits are preserved via `git subtree`. Note that
