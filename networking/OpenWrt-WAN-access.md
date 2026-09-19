@@ -1,5 +1,7 @@
 # OpenWrt — SSH + LuCI reachable on WAN
-Notes from 2026-09-19. The "WAN" in my setup is a private 192.168.1.0/24 segment behind the
+Tested 2026-09-19 on a **Netgear Nighthawk X4S R7800** (`netgear,r7800`, ipq806x) running
+OpenWrt 23.05.5 / fw4 (nftables). Should apply to any 22.03+ box; older iptables-era
+builds won't have the `nft` commands. The "WAN" in my setup is a private 192.168.1.0/24 segment behind the
 ISP router, so this is LAN-to-LAN exposure, not internet. Re-check that before reusing any of it
 (`tracepath -n 1.1.1.1` from behind the box — if hop 2 is public, stop).
 
