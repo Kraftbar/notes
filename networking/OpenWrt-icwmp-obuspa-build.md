@@ -134,9 +134,14 @@ Trust roles shipped in `/etc/obuspa/ctrust_reset`: `full_access`, `Untrusted` (t
 `assigned_role_name` is omitted — the controller can then do nothing useful), `extender`.
 
 ## The controller side
-`lat:/var/www/twitterclone/tools/mockacs` (Go, no deps). It binds `127.0.0.1` by default;
-the router is another host, so bind the LAN address — not `0.0.0.0`, lat may be internet-reachable:
+`sigma-lab/mockacs` (Go, no deps; repo on `lat:~/sigma-lab`, clone in `~/github/sigma-lab`).
+Runs as a `systemd --user` unit on `lat` with linger enabled, so it survives reboots:
 ```sh
-go build -o ~/icwmp-build/mockacs . && ~/icwmp-build/mockacs -http 192.168.1.223:7547 -usp 192.168.1.223:7548
+systemctl --user status mockacs            # on lat
+journalctl --user -u mockacs -f -o cat     # JSON lines; grep cwmp_rpc|usp_message for the RPCs
+ssh -L 7557:127.0.0.1:7557 lat             # then http://localhost:7557 for the admin page
 ```
-Admin (`:7557`) and XMPP (`:5222`) stay on loopback.
+It binds the LAN address (`192.168.1.223`), not `0.0.0.0` — lat may be internet-reachable.
+Admin (`:7557`) and XMPP (`:5222`) stay on loopback. Unit file:
+`~/.config/systemd/user/mockacs.service`; rebuild with `go build -o mockacs .` in the repo
+dir and `systemctl --user restart mockacs`.
