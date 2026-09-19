@@ -60,7 +60,17 @@ Output: `out/packages/<arch>/iopsys/*.ipk` (9 files, ~1.2 MB) plus the rebuilt `
 4. **Runtime: obuspa aborts with `Failed to select OpenSSL backend for libcurl`.** Both the
    router's stock `libcurl4` and the SDK's default build are mbedTLS. Rebuild curl with
    `CONFIG_LIBCURL_OPENSSL=y` and `opkg install --force-reinstall` it. Same `libcurl4` ABI.
-5. **`make` inside a detached container must never reach `menuconfig`.** If `.config` is missing
+5. **`opkg install /tmp/libcurl4_*.ipk` silently installed the *feed's* libcurl4 instead.**
+   Same name and version in the index, so opkg preferred the index. Nothing in the output says
+   so. Hide the lists for that one install, and verify on the `.so`, not on `opkg status`
+   (its Depends line stayed stale afterwards):
+   ```sh
+   mv /var/opkg-lists /var/opkg-lists.off
+   opkg install --force-reinstall /tmp/libcurl4_*.ipk
+   mv /var/opkg-lists.off /var/opkg-lists
+   grep -c libssl /usr/lib/libcurl.so.4*     # 1 = OpenSSL backend live
+   ```
+6. **`make` inside a detached container must never reach `menuconfig`.** If `.config` is missing
    it tries to, and dies with `Error opening terminal: unknown`. That's the symptom of gotcha 3.
 
 ## Install on the router
@@ -114,6 +124,12 @@ commit obuspa
 EOT
 /etc/init.d/obuspa restart; logread | grep obuspa
 ```
+Two log lines that look like failures and aren't: `No enabled MTPs in Device.LocalAgent.MTP`
+(that's the agent's *server-side* MTP — not needed when the agent is the WebSocket client) and
+one `Discarding USP message to send to controller.1.MTP.1` before the socket is up. Success looks
+like this in the controller's log: `websocket_connect` record → `NOTIFY` `OnBoardRequest` →
+`NOTIFY_RESP`. Check with `obuspa -c get Device.LocalAgent.Controller.1.` on the router.
+
 Trust roles shipped in `/etc/obuspa/ctrust_reset`: `full_access`, `Untrusted` (the default if
 `assigned_role_name` is omitted — the controller can then do nothing useful), `extender`.
 
