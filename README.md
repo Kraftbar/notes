@@ -18,7 +18,7 @@ Reference notes and scratch code, consolidated from 19 former `*-r` repositories
 ## Loose files
 
 - `ideas.md` — project backlog, from the former `active-proj` repo.
-- `networking/` — router and OpenWrt config notes, from `GL-AR750S-Ext`; `networking/byteblower/` — distilled ByteBlower docs (2026-10-08).
+- `networking/` — router and OpenWrt config notes, from `GL-AR750S-Ext`; `networking/byteblower.md` — distilled ByteBlower docs (2026-10-08).
 - `chatgpt/` — answers saved from ChatGPT on 17–18 December 2022, ~2.5 weeks
   after it launched. Kept as a period piece; each file stamped with its date.
 - `shell/covid-bash.sh`, `shell/norske-tekster-count.sh` — from `covid-bash` and
