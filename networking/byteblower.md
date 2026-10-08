@@ -5,7 +5,7 @@ Excentis traffic generator/analyzer. Distilled from ~370 pages crawled 2026-10-0
 
 ## Links
 
-#### docs
+### docs
 >**[knowledge base](https://support.excentis.com/knowledge/article/39)**    
 >**[test framework](https://api.byteblower.com/test-framework/latest/)**    
 >**[python api (byteblowerll)](https://api.byteblower.com/python)**    
@@ -16,7 +16,7 @@ Excentis traffic generator/analyzer. Distilled from ~370 pages crawled 2026-10-0
 >**[cli-config-schema.json](https://api.byteblower.com/test-framework/json/cli-config-schema.json)**    
 >**[setup.byteblower.com](https://setup.byteblower.com/)** (blocks crawlers; per-model manuals + downloads)    
 
-#### test cases
+### test cases
 >**[rfc 2544 throughput](https://api.byteblower.com/test-framework/latest/test-cases/rfc-2544/overview.html)**    
 >**[tr-398 airtime fairness](https://api.byteblower.com/test-framework/latest/test-cases/tr-398/overview.html)**    
 >**[docsis 4.0 atp ll-04.40](https://api.byteblower.com/test-framework/latest/test-cases/docsis-atp/overview.html)**    
